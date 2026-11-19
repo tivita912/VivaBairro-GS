@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assistente acadêmico de voz para orientar relatos de problemas urbanos.">
+  <title>VivaBairro Voz | Atendimento por voz</title>
+  <link rel="icon" href="/assets/icon.svg">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/site.js" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#atendimento">Pular para o atendimento</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="VivaBairro Voz, início">
+        <img src="/assets/icon.svg" width="37" height="37" alt="">
+        <span>VivaBairro Voz</span>
+      </a>
+      <nav aria-label="Principal">
+        <a href="#atendimento">Atendimento</a>
+        <a href="#privacidade" id="privacy-link">Privacidade</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Sua voz pelo bairro.</h1>
+        <p>Conte um problema urbano por voz. Receba orientação para preparar seu relato.</p>
+      </div>
+      <img class="hero-art" src="/assets/bairro.webp" alt="" width="1100" height="400" fetchpriority="high">
+    </section>
+    <div class="layout">
+      <section class="card service" id="atendimento" tabindex="-1" aria-labelledby="service-title">
+        <h2 id="service-title">Atendimento por voz</h2>
+        <ol class="steps" aria-label="Etapas do atendimento">
+          <li aria-current="step"><span aria-hidden="true">1</span> Consentimento</li>
+          <li><span aria-hidden="true">2</span> Seu áudio</li>
+          <li><span aria-hidden="true">3</span> Transcrição</li>
+          <li><span aria-hidden="true">4</span> Resposta</li>
+        </ol>
+
+        <div id="status" class="status" role="status" aria-live="polite" aria-atomic="true"></div>
+        <div id="error" class="error" role="alert"></div>
+        <noscript><p class="notice">Ative o JavaScript para usar a gravação e o atendimento.</p></noscript>
+
+        <section id="privacidade" aria-labelledby="consent-title">
+          <h3 id="consent-title" tabindex="-1">Antes de gravar</h3>
+          <div class="notice">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg>
+            <p>Áudio e texto são processados pela OpenAI. Evite informar nome completo, CPF, telefone ou endereço residencial completo.</p>
+          </div>
+          <details id="privacy-details" class="privacy-details">
+            <summary>Como seus dados são usados</summary>
+            <p id="privacy-notice"></p>
+            <p id="retention"></p>
+            <a href="https://developers.openai.com/api/docs/guides/your-data" target="_blank" rel="noopener noreferrer">Política de dados da OpenAI (abre em outra aba)</a>
+          </details>
+          <form id="consent-form">
+            <fieldset id="consent-fields" disabled>
+              <legend class="sr-only">Autorizações necessárias</legend>
+              <label class="check"><input type="checkbox" name="accepted" required> Li o aviso e autorizo a gravação e o processamento descritos.</label>
+              <label class="check"><input type="checkbox" name="external_audio" required> Autorizo o envio do meu áudio à OpenAI para transcrição.</label>
+              <label class="check"><input type="checkbox" name="external_text" required> Autorizo o envio de transcrição, histórico e resposta à OpenAI para gerar texto e voz.</label>
+              <button class="button primary" type="submit">Confirmar consentimento</button>
+            </fieldset>
+          </form>
+          <p id="consent-confirmed" class="confirmed" hidden>Consentimento confirmado para esta sessão.</p>
+        </section>
+
+        <section class="capture" aria-labelledby="capture-title">
+          <div id="capture-locked" class="locked">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/></svg>
+            <span>Grave ou envie um áudio após confirmar o consentimento.</span>
+          </div>
+          <div id="capture-controls" hidden>
+            <h3 id="capture-title" tabindex="-1">Grave ou envie um áudio</h3>
+            <p class="muted" id="audio-limits"></p>
+            <div class="capture-options">
+              <div>
+                <button class="button secondary" id="record" type="button">
+                  <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="13" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2m-7 9v3"/></svg>
+                  <span id="record-label">Gravar pelo microfone</span>
+                </button>
+              </div>
+              <div>
+                <label class="upload-label" for="upload">Ou escolha um arquivo</label>
+                <input id="upload" type="file" accept=".wav,.mp3,.m4a,.mp4,.webm,.ogg,.flac" aria-describedby="audio-limits">
+              </div>
+            </div>
+            <div id="selection" class="selection" hidden>
+              <p id="selection-name"></p>
+              <audio id="preview" controls preload="metadata" aria-label="Prévia do seu áudio"></audio>
+              <button id="send" class="button primary" type="button">Enviar áudio</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="result" aria-labelledby="result-title">
+          <h3 id="result-title" tabindex="-1">Transcrição e resposta</h3>
+          <p class="empty-result" id="result-empty">A transcrição e a orientação aparecem aqui após o envio.</p>
+          <div id="transcription-block" class="result-text" hidden>
+            <h4>O que entendemos da sua fala</h4>
+            <p id="transcription"></p>
+          </div>
+          <div id="response-block" class="result-text answer" hidden>
+            <h4>Orientação para seu relato</h4>
+            <p id="answer"></p>
+            <div id="playback" hidden>
+              <p class="muted audio-label">Ouça a resposta em voz sintética</p>
+              <audio id="answer-audio" controls preload="auto" aria-label="Resposta em voz sintética"></audio>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="button text-button" id="retry" type="button" hidden>Nova tentativa</button>
+            <button class="button text-button" id="clear" type="button" disabled>
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3 11a9 9 0 1 1 3 7M3 5v6h6"/></svg>
+              Limpar conversa
+            </button>
+          </div>
+        </section>
+      </section>
+
+      <aside class="sidebar" aria-label="Informações do atendimento">
+        <section class="card side-card" aria-labelledby="topics-title">
+          <h2 id="topics-title">Temas atendidos</h2>
+          <div class="topics">
+            <details data-topic="buracos"><summary><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m3 13 2-5h14l2 5v5H3zm0 0h18M6 18v2m12-2v2m-11-5h.01m10 0h.01"/></svg>Buracos nas ruas</summary><p></p><a hidden></a></details>
+            <details data-topic="calcadas"><summary><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="14" cy="4" r="2"/><path d="m5 22 4-7 2-7m-4 5 4-5 4 5h5m-9-2 1 5 4 6"/></svg>Calçadas e acessibilidade</summary><p></p><a hidden></a></details>
+            <details data-topic="iluminacao"><summary><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 22h7M8 22V6a4 4 0 0 1 8 0v2m-4 0h8m-6 3-1 2m5-2 1 2"/></svg>Iluminação pública</summary><p></p><a hidden></a></details>
+            <details data-topic="lixo"><summary><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3 6h18M6 6l1 15h10l1-15M9 6V3h6v3m-5 4v7m4-7v7"/></svg>Descarte irregular de lixo</summary><p></p><a hidden></a></details>
+            <details data-topic="alagamentos"><summary><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M2 9c2 3 4 3 6 0 2 3 4 3 6 0 2 3 4 3 6 0h2M2 15c2 3 4 3 6 0 2 3 4 3 6 0 2 3 4 3 6 0h2"/></svg>Alagamentos</summary><p></p><a hidden></a></details>
+          </div>
+          <p class="limits">O assistente orienta sobre o relato. O envio pelos canais oficiais fica a seu cargo.</p>
+        </section>
+        <section class="card side-card" aria-labelledby="history-title">
+          <h2 id="history-title">Histórico da conversa</h2>
+          <div class="history-empty" id="history-empty">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 8h8m-8 4h8m-8 4h5"/></svg>
+            <p>Ainda não há registros.</p>
+          </div>
+          <ol id="history"></ol>
+        </section>
+        <details class="card side-card metrics">
+          <summary>Métricas do atendimento</summary>
+          <p id="metrics-empty" class="muted">Os tempos aparecem após o processamento.</p>
+          <dl id="metrics"></dl>
+          <details id="metrics-more" hidden>
+            <summary>Detalhes técnicos</summary>
+            <pre id="metrics-json"></pre>
+          </details>
+        </details>
+      </aside>
+    </div>
+  </main>
+  <footer class="container footer"><span><strong>VivaBairro Voz</strong> · Projeto acadêmico FIAP</span><span>Orientação cidadã</span></footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+descricao,categoria,prioridade,categoria_robo,revisao_humana,confianca,prioridade_robo,motivo_prioridade,categoria_certa,prioridade_certa
+"Abriu um buracão na Rua das Palmeiras depois da obra da companhia de água, os carros passam raspando o fundo.",Vias e buracos,media,Drenagem e alagamentos,False,0.69,media,sem termo de risco nem de baixa urgencia,False,True
+"Moto caiu ontem à noite por causa de uma cratera sem sinalização na descida da avenida, o rapaz se machucou.",Vias e buracos,alta,Vias e buracos,False,0.51,alta,termo de risco: machuc,True,True
+"O asfalto da minha rua está descascando em alguns pontos, nada grave, mas fica feio e junta poeira.",Vias e buracos,baixa,Vias e buracos,False,0.77,baixa,termo de baixa urgencia: feio,True,True
+"A tampa do poço de visita afundou e ficou um degrau no meio da pista, o ônibus bate forte quando passa.",Vias e buracos,media,Vias e buracos,False,0.41,alta,termo de risco: afund,True,False
+"A pintura da lombada sumiu faz tempo, de noite ninguém enxerga e os carros freiam em cima.",Vias e buracos,media,Vias e buracos,False,0.74,baixa,termo de baixa urgencia: pintura,True,False
+"Rua de paralelepípedo com várias pedras soltas, já vi ciclista quase cair ali.",Vias e buracos,alta,Outros,True,0.3,alta,termo de risco: cair,False,True
+Fizeram um tapa-buraco na semana passada e já abriu tudo de novo com a chuva.,Vias e buracos,media,Outros,True,0.28,media,sem termo de risco nem de baixa urgencia,False,True
+"Tem um afundamento grande no asfalto bem na curva, perigoso para quem vem de moto.",Vias e buracos,alta,Vias e buracos,False,0.47,alta,termo de risco: perig,True,True
+"A faixa de pedestre em frente ao mercado está quase invisível, toda desbotada.",Vias e buracos,media,Vias e buracos,True,0.34,baixa,termo de baixa urgencia: desbotad,True,False
+"Pequeno buraco começando a abrir perto da guia, ainda não atrapalha o trânsito.",Vias e buracos,baixa,Vias e buracos,False,0.64,baixa,termo de baixa urgencia: pequen,True,True
+Minha mãe usa cadeira de rodas e não consegue passar na calçada da farmácia porque não tem rampa.,Calçadas e acessibilidade,alta,Calçadas e acessibilidade,False,0.75,alta,termo de risco: cadeira de rodas,True,True
+"A calçada da rua do colégio está toda levantada por raiz de árvore, uma senhora tropeçou e caiu na semana passada.",Calçadas e acessibilidade,alta,Calçadas e acessibilidade,False,0.46,alta,termo de risco: caiu,True,True
+O piso tátil da esquina foi arrancado numa reforma e nunca recolocaram.,Calçadas e acessibilidade,media,Calçadas e acessibilidade,False,0.93,media,sem termo de risco nem de baixa urgencia,True,True
+A calçada em frente ao número 200 tem umas lajotas soltas que balançam quando a gente pisa.,Calçadas e acessibilidade,media,Calçadas e acessibilidade,False,0.73,media,sem termo de risco nem de baixa urgencia,True,True
+"Um comerciante colocou vasos e mesas ocupando o passeio inteiro, o pedestre tem que andar na rua.",Calçadas e acessibilidade,media,Calçadas e acessibilidade,True,0.34,media,sem termo de risco nem de baixa urgencia,True,True
+"A rampa de acesso do cruzamento ficou com um degrau depois do recapeamento, cadeirante não sobe.",Calçadas e acessibilidade,alta,Calçadas e acessibilidade,False,0.74,alta,termo de risco: cadeirante,True,True
+"Calçada muito estreita por causa de um poste, carrinho de bebê só passa pela rua.",Calçadas e acessibilidade,media,Calçadas e acessibilidade,False,0.75,media,sem termo de risco nem de baixa urgencia,True,True
+"O passeio está com a pintura da guia apagada, só isso, o resto está bom.",Calçadas e acessibilidade,baixa,Vias e buracos,False,0.42,baixa,termo de baixa urgencia: pintura,False,True
+"Tem um desnível feio entre duas calçadas vizinhas, um idoso do prédio já torceu o pé.",Calçadas e acessibilidade,alta,Calçadas e acessibilidade,False,0.42,alta,termo de risco: idos,True,True
+"Um trecho da calçada é de terra e vira lama, as pessoas desviam pelo asfalto.",Calçadas e acessibilidade,media,Vias e buracos,False,0.71,media,sem termo de risco nem de baixa urgencia,False,True
+"Faz duas semanas que os postes da viela estão apagados, já teve assalto e as pessoas têm medo de voltar do trabalho.",Iluminação pública,alta,Vias e buracos,True,0.28,alta,termo de risco: assalt,False,True
+A lâmpada do poste em frente de casa fica acendendo e apagando a noite inteira.,Iluminação pública,media,Iluminação pública,False,0.92,media,sem termo de risco nem de baixa urgencia,True,True
+"A luz da praça fica acesa o dia todo, um desperdício de energia.",Iluminação pública,baixa,Iluminação pública,False,0.6,media,sem termo de risco nem de baixa urgencia,True,False
+"Poste com fio solto pendurado quase na altura das pessoas, soltando faísca.",Iluminação pública,alta,Iluminação pública,False,0.57,alta,termo de risco: fio solto,True,True
+"Escuridão total no ponto de ônibus da avenida, quem espera à noite fica sem enxergar nada.",Iluminação pública,media,Iluminação pública,True,0.34,media,sem termo de risco nem de baixa urgencia,True,True
+"Trocaram as lâmpadas da rua, mas uma ficou sem acender.",Iluminação pública,media,Vias e buracos,False,0.7,media,sem termo de risco nem de baixa urgencia,False,True
+A luminária do poste da esquina está virada para o lado errado e ilumina só o telhado.,Iluminação pública,baixa,Iluminação pública,False,0.69,media,sem termo de risco nem de baixa urgencia,True,False
+"Rua sem luz há um mês, as crianças voltam da escola no escuro à noite.",Iluminação pública,alta,Iluminação pública,False,0.95,alta,termo de risco: crianca,True,True
+A iluminação do campinho queimou e o pessoal não consegue mais jogar de noite.,Iluminação pública,baixa,Iluminação pública,False,0.82,media,sem termo de risco nem de baixa urgencia,True,False
+"Quatro postes apagados na sequência na rua de cima, fica um breu.",Iluminação pública,media,Outros,True,0.21,media,sem termo de risco nem de baixa urgencia,False,True
+"Jogaram entulho de reforma na calçada e na rua, virou depósito de lixo do bairro.",Lixo e limpeza,media,Lixo e limpeza,False,0.77,media,sem termo de risco nem de baixa urgencia,True,True
+"O caminhão da coleta não passa na nossa rua desde terça, os sacos estão se acumulando.",Lixo e limpeza,media,Lixo e limpeza,True,0.25,media,sem termo de risco nem de baixa urgencia,True,True
+"Terreno vazio com mato alto e lixo, apareceu escorpião dentro de casa e tenho criança pequena.",Lixo e limpeza,alta,Lixo e limpeza,False,0.93,alta,termo de risco: crianca,True,True
+A lixeira da praça está cheia e ninguém esvazia há dias.,Lixo e limpeza,baixa,Iluminação pública,True,0.29,media,sem termo de risco nem de baixa urgencia,False,False
+Largaram um sofá velho e um guarda-roupa na esquina faz uns dez dias.,Lixo e limpeza,media,Lixo e limpeza,False,0.52,media,sem termo de risco nem de baixa urgencia,True,True
+"Cheiro insuportável vindo de um ponto de descarte perto do córrego, cheio de rato.",Lixo e limpeza,media,Lixo e limpeza,False,0.71,media,sem termo de risco nem de baixa urgencia,True,True
+"Folhas e galhos da poda ficaram empilhados na rua, não é urgente, mas já faz tempo.",Lixo e limpeza,baixa,Drenagem e alagamentos,True,0.27,baixa,termo de baixa urgencia: nao e urgente,False,True
+A feira de domingo deixa a rua imunda e a varrição só aparece dias depois.,Lixo e limpeza,media,Lixo e limpeza,True,0.31,media,sem termo de risco nem de baixa urgencia,True,True
+Tem vidro quebrado e seringa jogados no parquinho onde as crianças brincam.,Lixo e limpeza,alta,Outros,True,0.4,alta,termo de risco: crianca,False,True
+Restos de construção despejados de madrugada na beira da pista.,Lixo e limpeza,media,Outros,False,0.42,media,sem termo de risco nem de baixa urgencia,False,True
+Toda vez que chove forte a água sobe e entra na garagem das casas da parte baixa da rua.,Drenagem e alagamentos,alta,Drenagem e alagamentos,False,0.88,media,sem termo de risco nem de baixa urgencia,True,False
+A boca de lobo da esquina está tapada de lixo e a água não desce.,Drenagem e alagamentos,media,Drenagem e alagamentos,False,0.72,media,sem termo de risco nem de baixa urgencia,True,True
+A rua ficou alagada ontem e um carro ficou preso com gente dentro.,Drenagem e alagamentos,alta,Outros,False,0.72,alta,termo de risco: alagad,False,True
+"Poça enorme que nunca seca em frente ao ponto, quem desce do ônibus pisa na água.",Drenagem e alagamentos,media,Drenagem e alagamentos,False,0.55,media,sem termo de risco nem de baixa urgencia,True,True
+"O córrego atrás das casas está quase transbordando, o nível sobe rápido quando chove.",Drenagem e alagamentos,alta,Drenagem e alagamentos,False,0.93,alta,termo de risco: transbord,True,True
+"Bueiro sem grade na calçada, um buraco aberto onde cabe uma perna.",Drenagem e alagamentos,alta,Calçadas e acessibilidade,False,0.4,media,sem termo de risco nem de baixa urgencia,False,False
+"Depois da chuva fica um pouco de água parada no canto da rua, some em um dia.",Drenagem e alagamentos,baixa,Drenagem e alagamentos,False,0.94,media,sem termo de risco nem de baixa urgencia,True,False
+A canaleta que leva a água da chuva está cheia de terra e mato.,Drenagem e alagamentos,media,Drenagem e alagamentos,False,0.9,media,sem termo de risco nem de baixa urgencia,True,True
+"Enchente de novo na baixada, perdemos móveis e a água chegou no joelho.",Drenagem e alagamentos,alta,Drenagem e alagamentos,False,0.52,alta,termo de risco: enchente,True,True
+"O ralo da rua entupiu com folhas das árvores, precisa de limpeza antes do verão.",Drenagem e alagamentos,media,Drenagem e alagamentos,False,0.54,media,sem termo de risco nem de baixa urgencia,True,True
+"O semáforo do cruzamento está apagado desde cedo, já quase teve batida.",Outros,alta,Outros,True,0.37,media,sem termo de risco nem de baixa urgencia,True,False
+Galho grande de árvore ameaçando cair em cima dos carros estacionados.,Outros,alta,Outros,True,0.32,alta,termo de risco: cair,True,True
+O vizinho faz festa com som alto até de madrugada todo fim de semana.,Outros,media,Outros,False,0.92,media,sem termo de risco nem de baixa urgencia,True,True
+Picharam o muro da escola de novo.,Outros,baixa,Outros,False,0.68,media,sem termo de risco nem de baixa urgencia,True,False
+"Carro abandonado sem rodas na rua há meses, virou abrigo de bicho.",Outros,media,Outros,False,0.65,media,sem termo de risco nem de baixa urgencia,True,True
+"O balanço do parquinho está com a corrente quebrada, criança pode se machucar.",Outros,alta,Outros,False,0.48,alta,termo de risco: machuc,True,True
+"Ponto de ônibus sem banco e sem cobertura, os idosos esperam em pé no sol.",Outros,media,Outros,False,0.83,alta,termo de risco: idos,True,False
+A placa com o nome da rua caiu e ninguém acha o endereço.,Outros,baixa,Outros,False,0.63,alta,termo de risco: caiu,True,False
+Cachorro bravo solto na rua avançando nas pessoas que passam.,Outros,alta,Drenagem e alagamentos,True,0.35,media,sem termo de risco nem de baixa urgencia,False,False
+"Seria bom ter mais lixeiras e bancos na praça, é só uma sugestão.",Outros,baixa,Outros,False,0.42,media,sem termo de risco nem de baixa urgencia,True,False

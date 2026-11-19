@@ -1,0 +1,6 @@
+origem,arquivo,linha,data,bairro,descricao,motivo,categoria_sugerida,prioridade_sugerida,confianca
+linha invalida,relatos_2026-11-18.csv,20,2026-11-18,Penha,Buraco na rua.,descricao com menos de 30 caracteres,,,
+linha invalida,relatos_2026-11-18.csv,21,2026-11-18,,"Lixo acumulado há semanas na esquina da padaria, com mau cheiro forte.",bairro ausente ou com tamanho invalido,,,
+linha invalida,relatos_2026-11-18.csv,22,18/11/2026,Mooca,"Poste apagado em frente ao número 45 da rua, está escuro desde o fim de semana.",data ausente ou fora do formato AAAA-MM-DD,,,
+linha invalida,relatos_2026-11-18.csv,23,2026-11-18,Santana,,descricao com menos de 30 caracteres,,,
+baixa confianca da IA,relatos_2026-11-18.csv,7,2026-11-18,Santo Amaro,"Semáforo de pedestres não acende no cruzamento da avenida, as pessoas atravessam no susto.",confianca abaixo de 0.4,Outros,media,0.29

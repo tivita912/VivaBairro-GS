@@ -1,0 +1,36 @@
+Subject: VivaBairro - resumo de relatos (2026-11-19)
+From: robo@vivabairro.invalid
+To: zeladoria@vivabairro.invalid
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+MIME-Version: 1.0
+
+Resumo automatico do VivaBairro (prototipo academico, dados sinteticos).
+
+Relatos na base: 17
+Novos nesta execucao: 17
+Aguardando revisao humana: 1 relato(s) e 4 linha(s) invalida(s)
+API de clima: ok (15 bairro(s) consultado(s))
+
+Por prioridade:
+  - media: 11
+  - alta: 5
+  - baixa: 1
+
+Por categoria:
+  - Drenagem e alagamentos: 4
+  - Vias e buracos: 3
+  - Lixo e limpeza: 3
+  - Iluminação pública: 3
+  - Outros: 2
+  - Calçadas e acessibilidade: 2
+
+Primeiros da fila (prioridade alta):
+  - [Butantã] Calçadas e acessibilidade: Raiz de árvore levantou o piso da calçada e uma idosa caiu ontem de manhã.
+  - [Capão Redondo] Drenagem e alagamentos: A rua alagou ontem à noite e a água invadiu duas casas da parte baixa.
+  - [Santana] Iluminação pública: Fio solto pendurado no poste de luz, perto do ponto de ônibus, com risco de choque.
+  - [Lapa] Calçadas e acessibilidade: Calçada quebrada em frente à estação, um cadeirante precisou ir pela rua para conseguir pa
+  - [Penha] Vias e buracos: Asfalto afundando perto da boca de lobo, o buraco aumenta a cada chuva.
+
+A fila completa esta em saida/fila_priorizada.csv.
+Toda prioridade e uma sugestao do robo e deve ser conferida por uma pessoa.

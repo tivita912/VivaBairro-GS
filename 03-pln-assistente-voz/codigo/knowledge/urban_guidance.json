@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0",
+  "entries": [
+    {
+      "id": "buracos-relato", "topic": "buracos",
+      "text": "Para preparar um rascunho sobre um buraco, descreva o que observou, o local aproximado e como isso dificulta a circulação. Use apenas informações que já conhece, sem se aproximar do perigo. O cidadão deve revisar o relato e conferir os canais oficiais do seu município. Não há serviço municipal verificado nesta base.",
+      "source_url": "knowledge/sources.md#orientacoes-editoriais",
+      "source_title": "VivaBairro — orientação editorial para descrição de problemas",
+      "geographic_scope": "Genérico; sem procedimento municipal", "consulted_on": "2026-11-11",
+      "kind": "editorial_guidance"
+    },
+    {
+      "id": "calcadas-relato", "topic": "calcadas",
+      "text": "No rascunho sobre calçada danificada, descreva o obstáculo e o impacto percebido na passagem de pedestres ou pessoas com mobilidade reduzida. Não atribua responsabilidade legal pelo reparo. Não é necessário informar dados pessoais ou fazer uma inspeção. Confira o canal oficial do município antes de encaminhar.",
+      "source_url": "knowledge/sources.md#orientacoes-editoriais",
+      "source_title": "VivaBairro — orientação editorial para descrição de problemas",
+      "geographic_scope": "Genérico; sem procedimento municipal", "consulted_on": "2026-11-11",
+      "kind": "editorial_guidance"
+    },
+    {
+      "id": "iluminacao-relato", "topic": "iluminacao",
+      "text": "Para descrever iluminação inadequada, informe o trecho aproximado, se a luz parece apagada ou intermitente e o impacto observado. Não toque em postes ou fiação, nem tente reparar equipamentos. Não há concessionária, prazo ou contato local verificado nesta base.",
+      "source_url": "knowledge/sources.md#orientacoes-editoriais",
+      "source_title": "VivaBairro — orientação editorial para descrição de problemas",
+      "geographic_scope": "Genérico; sem procedimento municipal", "consulted_on": "2026-11-11",
+      "kind": "editorial_guidance"
+    },
+    {
+      "id": "lixo-relato", "topic": "lixo",
+      "text": "Descreva o acúmulo de resíduos que já observou, o local aproximado e o impacto na circulação. Não manuseie materiais desconhecidos para identificá-los e não acuse pessoas sem evidências. Regras de coleta e locais de descarte devem ser confirmados no canal oficial do município; esta base não informa procedimentos locais.",
+      "source_url": "knowledge/sources.md#orientacoes-editoriais",
+      "source_title": "VivaBairro — orientação editorial para descrição de problemas",
+      "geographic_scope": "Genérico; sem procedimento municipal", "consulted_on": "2026-11-11",
+      "kind": "editorial_guidance"
+    },
+    {
+      "id": "alagamentos-seguranca", "topic": "alagamentos",
+      "text": "Evite contato com água de alagamento e não atravesse ruas, pontes ou avenidas alagadas, mesmo usando veículo. Priorize um lugar seguro e siga as orientações das autoridades. O assistente não avalia condições de travessia nem aciona resgate. Em perigo imediato, procure os serviços de emergência competentes.",
+      "source_url": "https://www.gov.br/pt-br/noticias/transito-e-transportes/2022/07/conheca-medidas-de-autoprotecao-que-a-populacao-deve-tomar-em-casos-de-alagamento",
+      "source_title": "Governo Federal — medidas de autoproteção em casos de alagamento",
+      "geographic_scope": "Brasil; orientação geral, sem procedimento municipal", "consulted_on": "2026-11-11",
+      "kind": "official_guidance"
+    }
+  ]
+}

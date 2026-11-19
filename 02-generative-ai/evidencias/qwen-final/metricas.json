@@ -1,0 +1,10 @@
+{
+  "cases": 23,
+  "passed": 22,
+  "controlled_cases": 6,
+  "controlled_passed": 6,
+  "execution_errors": 0,
+  "llm_calls": 19,
+  "security_passed": 2,
+  "followup_passed": true
+}

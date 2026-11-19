@@ -1,0 +1,24 @@
+00:00–00:24 · Proposta
+O VivaBairro é uma proposta CitizenTech para quem precisa comunicar um problema urbano. Pense em uma pessoa que encontra um buraco na via ou uma calçada que impede a passagem. A ferramenta ajuda a organizar o que ela observou e a localizar fontes oficiais. A demonstração usa a cidade de São Paulo.
+
+00:24–00:51 · Arquitetura
+A base usa páginas oficiais com endereço, órgão e data de consulta. As seções são organizadas em trechos de até sessenta e cinco palavras. A busca combina palavras em comum com uma projeção densa local. O Qwen escolhe um identificador presente nos trechos recuperados. A aplicação mostra o texto curado e sua fonte.
+
+00:51–01:23 · Demonstração real
+No navegador, seleciono São Paulo como município da ocorrência e informo uma referência de exemplo. Envio a descrição de um buraco. O Qwen roda localmente e seleciona uma evidência sobre tapa-buraco. O resultado exibe a orientação, a fonte e um rascunho com os dados fornecidos. A referência leva à carta oficial do serviço no Portal São Paulo cento e cinquenta e seis.
+
+01:23–01:51 · Revisão pelo cidadão
+Nesta captura, o texto já foi revisado. Posso completar o impacto observado, ajustar a prioridade preliminar e copiar o relato. A categoria também pode ser corrigida e consultada de novo. As sugestões são para organizar a comunicação. O protocolo e a avaliação do problema ficam a cargo do canal oficial.
+
+01:51–02:16 · Município
+Quando a pessoa escolhe outro município, o sistema preserva a ajuda para preparar o relato e informa que as fontes cadastradas cobrem a capital. Também pede dados que mudam o encaminhamento. Uma calçada sem tipo identificado e um terreno de natureza desconhecida exigem perguntas diferentes.
+
+02:16–02:41 · Proteções
+Se a descrição mencionar pessoas ilhadas ou outro sinal de perigo imediato, a aplicação orienta a buscar atendimento de emergência agora. A regra vem antes da chamada ao modelo. Nos testes acadêmicos, o sistema bloqueou uma entrada sintética e retirou um trecho suspeito do contexto recuperado.
+
+02:41–03:10 · Avaliação
+Na rodada final, o Qwen passou vinte e dois dos vinte e três cenários e seis dos seis casos com contexto controlado. A busca híbrida global encontrou oito das onze fontes esperadas. O alagamento recorrente sem informação de obstrução levou a uma abstenção. A revisão registrou esse caso e os limites da amostra.
+
+03:10–03:33 · Créditos
+A demonstração integra a interface e o assistente VivaBairro deste pacote. A aprovação da proposta e a integração com um eventual protótipo separado aguardam confirmação. O trabalho foi desenvolvido por Gustavo Civita Gonçalves, Rafael de Paiva Ramos e Thiago Santana Danyluk.
+Identificação visual nos créditos: turma 2TIAPY.

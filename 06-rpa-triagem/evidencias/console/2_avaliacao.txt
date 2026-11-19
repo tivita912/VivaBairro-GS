@@ -1,0 +1,5 @@
+Categoria: 45 de 60 certos
+Prioridade: 44 de 60 certos
+Prioridade alta encontrada: 17 de 21
+Enviados para revisao humana: 15 de 60
+Detalhes em: evidencias/avaliacao.md

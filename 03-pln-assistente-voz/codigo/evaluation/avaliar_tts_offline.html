@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Avaliação de voz TTS - VivaBairro Voz</title>
+<style>
+:root{font-family:system-ui,"Segoe UI",sans-serif;color:#173a31;background:#eef4ef}
+body{max-width:850px;margin:auto;padding:25px}
+h1{font-size:1.65rem}p{line-height:1.5}
+section{background:#fff;margin:14px 0;padding:18px 22px;border-radius:12px;border:1px solid #bed1c4}
+fieldset{border:0;display:flex;gap:18px;flex-wrap:wrap;padding:0;margin:14px 0}
+label{display:grid;gap:6px;min-width:140px}
+input,select,textarea,button{font:inherit;padding:9px;border:1px solid #809b8c;border-radius:6px}
+input,select,textarea{background:#fff}
+audio{width:100%;max-width:520px}
+button{background:#124c36;color:#fff;border:0;font-weight:650;cursor:pointer}
+textarea{width:100%;min-height:55px}
+header{background:#d8ebde;padding:20px;border-radius:12px}
+small{color:#4b6758}
+#feedback{font-weight:bold;margin-top:15px}
+@media(max-width:600px){body{padding:10px}section{padding:14px}fieldset{gap:9px}}
+</style></head><body>
+<header><h1>VivaBairro Voz — Avaliação de voz</h1>
+<p>Escute os dez arquivos de áudio e dê duas notas independentes para cada um.
+<strong>Clareza</strong> = facilidade de entender as palavras.
+<strong>Naturalidade</strong> = ritmo, entonação e sensação de voz humana.
+Escala: 1 muito ruim; 2 ruim; 3 regular; 4 boa; 5 muito boa.</p>
+<p>Abra este arquivo somente após extrair o ZIP inteiro para uma pasta.
+Não precisa de internet e nenhuma avaliação é transmitida automaticamente.</p>
+</header>
+<section><fieldset>
+<label>Seu identificador (sem nome completo)
+<input id="id" maxlength="36" placeholder="Exemplo: P02" required autocomplete="off"></label>
+<label>Data da avaliação
+<input id="date" type="date" required></label></fieldset>
+<small>Faça sua avaliação de forma independente dos demais integrantes.</small></section>
+<main id="items"></main>
+<section><button type="button" id="save">Exportar as 10 avaliações (CSV)</button><div id="feedback" role="status"></div>
+<p><small>Envie o CSV exportado por WhatsApp ao responsável pela entrega. Não altere os WAV.
+O CSV identifica o avaliador pelo código que você informou; não é preciso escrever seu CPF ou e-mail.</small></p></section>
+<script>
+(function(){
+  const ids=Array.from({length:10},(_,i)=>"T"+String(i+1).padStart(2,"0"));
+  const hashes = /*__TTS_HASHES__*/ {};
+  const played=new Set();
+  const now = new Date();
+  document.getElementById("date").value = [now.getFullYear(), now.getMonth()+1, now.getDate()]
+    .map(n => String(n).padStart(2, "0")).join("-");
+  const container=document.getElementById("items");
+  ids.forEach(id=>{
+    const section=document.createElement("section");section.dataset.id=id;
+    const head=document.createElement("h2");head.textContent=id;section.appendChild(head);
+    const audio=document.createElement("audio");
+    audio.controls=true;audio.preload="metadata";audio.src=id+".wav";
+    audio.addEventListener("ended",()=>played.add(id));section.appendChild(audio);
+    const field=document.createElement("fieldset");
+    for (const [fieldName,labelText] of [["clarity","Clareza"],["naturalness","Naturalidade"]]){
+      const label=document.createElement("label");label.textContent=labelText;
+      const select=document.createElement("select");select.className=fieldName;
+      const blank=document.createElement("option");blank.value="";blank.textContent="Escolha a nota";select.appendChild(blank);
+      for(let j=1;j<=5;j++){const option=document.createElement("option");option.value=String(j);option.textContent=String(j);select.appendChild(option);}
+      label.appendChild(select);field.appendChild(label);
+    }
+    section.appendChild(field);
+    const notes=document.createElement("label");notes.textContent="Observação opcional";
+    const textarea=document.createElement("textarea");textarea.className="notes";textarea.maxLength=600;
+    notes.appendChild(textarea);section.appendChild(notes);container.appendChild(section);
+  });
+  const feedback=document.getElementById("feedback");
+  const csvCell=x=>'"'+String(x).replace(/"/g,'""')+'"';
+  document.getElementById("save").onclick=()=>{
+    const person=document.getElementById("id").value.trim().toUpperCase();
+    const date=document.getElementById("date").value;
+    if(!/^P0[1-3]$/.test(person)){feedback.textContent="Informe P01, P02 ou P03, conforme o guia.";return;}
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(date)){feedback.textContent="Selecione uma data válida.";return;}
+    const out=[];
+    for(const id of ids){
+      if(!hashes[id]){feedback.textContent="Abra o formulário do ZIP de avaliação, que identifica os dez WAVs.";return;}
+      const section=container.querySelector('section[data-id="'+id+'"]');
+      const clarity=section.querySelector(".clarity").value;
+      const naturalness=section.querySelector(".naturalness").value;
+      if(!played.has(id)){feedback.textContent="Antes de exportar, reproduza o áudio "+id+" e avalie-o.";return;}
+      if(!clarity||!naturalness){feedback.textContent="Faltam as duas notas de "+id+".";return;}
+      out.push([id,person,clarity,naturalness,date,section.querySelector(".notes").value,hashes[id]]);
+    }
+    const head=["sample_id","evaluator_id","clarity_1_to_5","naturalness_1_to_5","evaluated_on","notes","audio_sha256"];
+    const csv=[head,...out].map(row=>row.map(csvCell).join(",")).join("\r\n")+"\r\n";
+    const blob=new Blob(["\ufeff",csv],{type:"text/csv;charset=utf-8"});
+    const url=URL.createObjectURL(blob);const anchor=document.createElement("a");
+    anchor.href=url;anchor.download="avaliacao_tts_"+person+".csv";anchor.click();
+    setTimeout(()=>URL.revokeObjectURL(url),2500);
+    feedback.textContent="Pronto! Envie o CSV baixado ao responsável pelo projeto.";
+  };
+})();
+</script></body></html>

@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11263b">
+  <title>VivaBairro | Sua Voz na Cidade</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2311263b'/%3E%3Cpath d='M21 10a8 8 0 1 0 0 12' fill='none' stroke='%239fe0d6' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      color-scheme: light;
+      --navy: #11263b;
+      --ink: #172d42;
+      --muted: #4f6274;
+      --canvas: #f3f6f9;
+      --surface: #fff;
+      --soft: #f5f8fb;
+      --line: #d7e0e8;
+      --control: #74899c;
+      --primary: #204f7c;
+      --primary-hover: #173d62;
+      --focus: #175b9c;
+      --teal: #206b63;
+      --mint: #a8e2da;
+      --question: #eaf1f8;
+      --error: #8c3129;
+      --error-surface: #fff5f2;
+      --s1: .25rem;
+      --s2: .5rem;
+      --s3: .75rem;
+      --s4: 1rem;
+      --s5: 1.25rem;
+      --s6: 1.5rem;
+      --s8: 2rem;
+      --s10: 2.5rem;
+      --text-sm: .8125rem;
+      --text-md: .9375rem;
+      --text-lg: 1.125rem;
+      --text-title: 1.5rem;
+      --radius: .5rem;
+      --radius-panel: .75rem;
+      --touch: 2.75rem;
+      --shell: 75rem;
+      background: var(--canvas);
+      color: var(--ink);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body { margin: 0; font-size: var(--text-md); line-height: 1.5; }
+    h1, h2, h3, p, ul, ol, dl, dd { margin: 0; }
+    button, textarea { font: inherit; }
+    button, summary { -webkit-tap-highlight-color: transparent; }
+    button, summary { cursor: pointer; }
+    a { color: var(--primary); text-underline-offset: .17em; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    .skip-link {
+      position: absolute;
+      z-index: 2;
+      inset: var(--s2) auto auto var(--s2);
+      padding: var(--s2) var(--s3);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+    .skip-link:not(:focus) { clip-path: inset(50%); }
+
+    .icon {
+      width: 1.1rem;
+      height: 1.1rem;
+      flex: none;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.65;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .sprite { position: absolute; width: 0; height: 0; }
+    .page-width { width: min(var(--shell), calc(100% - 3rem)); margin-inline: auto; }
+    .masthead { background: var(--navy); color: white; }
+    .masthead-inner {
+      min-height: 4.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--s4);
+    }
+    .brand { display: flex; align-items: center; gap: var(--s3); min-width: 0; }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      flex: none;
+      border-radius: var(--radius);
+      background: #234558;
+      color: var(--mint);
+    }
+    .brand-mark .icon { width: 1.35rem; height: 1.35rem; stroke-width: 2.5; }
+    .brand-name { font-size: var(--text-lg); font-weight: 700; letter-spacing: -.025em; }
+    .brand-context {
+      margin-inline-start: var(--s1);
+      padding-inline-start: var(--s4);
+      border-inline-start: 1px solid #506478;
+      color: #d1dde7;
+      font-size: var(--text-sm);
+    }
+    .academic { color: #d1dde7; font-size: var(--text-sm); text-align: end; }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: 15.5rem minmax(0, 1fr);
+      align-items: start;
+      gap: var(--s8);
+      padding-block: var(--s8) var(--s5);
+    }
+    .support { min-width: 0; }
+    .support-toggle { display: none; }
+    .support-body { display: grid; gap: var(--s6); padding: var(--s3) 0; }
+    .support h2 { margin-bottom: var(--s2); font-size: var(--text-md); font-weight: 700; }
+    .support p { font-size: var(--text-sm); line-height: 1.65; color: var(--muted); }
+    .support-section + .support-section {
+      padding-top: var(--s5);
+      border-top: 1px solid var(--line);
+    }
+    .suggestions { padding: 0; list-style: none; }
+    .suggestions li + li { border-top: 1px solid var(--line); }
+    .suggest {
+      display: flex;
+      width: 100%;
+      min-height: var(--touch);
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--s2);
+      padding: var(--s2) var(--s1);
+      border: 0;
+      border-radius: var(--radius);
+      background: transparent;
+      color: var(--primary);
+      text-align: start;
+      font-size: var(--text-sm);
+      line-height: 1.4;
+    }
+    .suggest:hover, .suggest:active { background: var(--question); }
+    .suggest[aria-disabled="true"] { color: var(--muted); cursor: wait; background: transparent; }
+    .suggest .icon { width: .95rem; height: .95rem; }
+    .privacy-heading { display: flex; gap: var(--s2); align-items: center; }
+    .privacy-heading .icon { color: var(--teal); }
+
+    .chat {
+      min-width: 0;
+      height: clamp(35rem, calc(100svh - 10.5rem), 43.5rem);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-panel);
+      background: var(--surface);
+      box-shadow: 0 1px 2px #172d420a;
+    }
+    .chat-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--s4);
+      padding: var(--s5) var(--s6);
+      border-bottom: 1px solid var(--line);
+    }
+    .chat-header h1 {
+      font-size: var(--text-title);
+      line-height: 1.24;
+      letter-spacing: -.035em;
+    }
+    .chat-header p { margin-top: var(--s1); color: var(--muted); font-size: var(--text-sm); }
+    .service-status { position: relative; flex: none; }
+    .service-status summary, .support-toggle { list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    .service-status summary {
+      display: flex;
+      align-items: center;
+      gap: var(--s2);
+      min-height: var(--touch);
+      padding: var(--s1) var(--s2);
+      border-radius: var(--radius);
+      color: var(--muted);
+      font-size: var(--text-sm);
+    }
+    .service-status summary:hover, .service-status summary:active,
+    .service-status[open] summary { background: var(--soft); }
+    .status-dot { width: .5rem; height: .5rem; border-radius: 50%; flex: none; background: var(--control); }
+    .service-status[data-state="ready"] .status-dot { background: var(--teal); }
+    .service-status[data-state="error"] summary { color: var(--error); }
+    .service-status[data-state="error"] .status-dot { background: var(--error); }
+    .chevron { width: .9rem; height: .9rem; }
+    details[open] > summary .chevron { transform: rotate(180deg); }
+    .status-details {
+      position: absolute;
+      z-index: 1;
+      inset-block-start: calc(100% + var(--s1));
+      inset-inline-end: 0;
+      width: min(17rem, 78vw);
+      padding: var(--s3) var(--s4);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 3px 12px #172d4214;
+      color: var(--muted);
+      font-size: var(--text-sm);
+      overflow-wrap: anywhere;
+    }
+    .status-details dt { font-weight: 650; color: var(--ink); }
+    .status-details dd + dt { margin-top: var(--s2); }
+
+    .history {
+      min-width: 0;
+      overflow-y: auto;
+      overscroll-behavior-y: contain;
+      scrollbar-gutter: stable;
+      padding: var(--s6);
+    }
+    .history:has(.welcome:not([hidden])) { display: grid; align-content: center; }
+    .history:focus-visible { outline-offset: -4px; }
+    .conversation { width: min(100%, 46rem); margin-inline: auto; }
+    .welcome {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: start;
+      gap: var(--s4);
+      width: min(100%, 34rem);
+      margin-inline: auto;
+      padding: var(--s5) var(--s6);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-panel);
+      background: var(--soft);
+    }
+    .welcome .icon-box {
+      display: grid;
+      place-items: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: var(--radius);
+      background: #e4f1ef;
+      color: var(--teal);
+    }
+    .welcome h2 { font-size: var(--text-lg); line-height: 1.35; letter-spacing: -.018em; }
+    .welcome p { max-width: 46ch; margin-top: var(--s2); color: var(--muted); line-height: 1.65; }
+    .messages { display: grid; gap: var(--s5); }
+    .message { min-width: 0; width: fit-content; max-width: min(100%, 43rem); }
+    .message-user { justify-self: end; max-width: min(84%, 37rem); }
+    .message-label { margin-bottom: var(--s1); font-size: var(--text-sm); font-weight: 650; }
+    .message-user .message-label { text-align: end; color: var(--muted); }
+    .message-body {
+      padding: var(--s3) var(--s4);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--soft);
+      line-height: 1.65;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .message-user .message-body { border-color: #d5e1ed; background: var(--question); }
+    .message-error .message-body, .message-urgent .message-body { border-color: #e9c3ba; background: var(--error-surface); color: var(--error); }
+    .pending { margin-top: var(--s5); }
+    .pending .message-body { display: flex; align-items: center; gap: var(--s2); color: var(--muted); }
+    .spinner {
+      width: .95rem;
+      height: .95rem;
+      flex: none;
+      border: 2px solid var(--line);
+      border-top-color: var(--teal);
+      border-radius: 50%;
+      animation: turn .85s linear infinite;
+    }
+    @keyframes turn { to { transform: rotate(360deg); } }
+
+    .references { margin-top: var(--s3); }
+    .references-title {
+      display: flex;
+      align-items: center;
+      gap: var(--s2);
+      margin-bottom: var(--s1);
+      font-size: var(--text-sm);
+      font-weight: 650;
+    }
+    .references-title .icon { color: var(--teal); }
+    .references-list { padding: 0; list-style: none; }
+    .reference {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: start;
+      gap: var(--s2);
+      min-height: var(--touch);
+      padding: var(--s2) var(--s2) var(--s2) 0;
+      border-top: 1px solid var(--line);
+      overflow-wrap: anywhere;
+    }
+    .reference-id { min-width: 2.25rem; color: var(--muted); font-size: var(--text-sm); font-variant-numeric: tabular-nums; }
+    .reference-link { min-height: 1.5rem; display: inline-flex; align-items: baseline; gap: var(--s1); font-weight: 600; }
+    .reference-link .icon { width: .8rem; height: .8rem; align-self: center; }
+    .reference-meta { margin-top: var(--s1); color: var(--muted); font-size: var(--text-sm); }
+
+    .composer {
+      padding: var(--s4) var(--s6);
+      border-top: 1px solid var(--line);
+      border-radius: 0 0 var(--radius-panel) var(--radius-panel);
+      background: var(--surface);
+    }
+    .composer-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: var(--s2);
+      margin-bottom: var(--s2);
+      font-size: var(--text-sm);
+      font-weight: 650;
+    }
+    .counter { color: var(--muted); font-variant-numeric: tabular-nums; font-weight: 400; }
+    .controls { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: var(--s2); }
+    .controls textarea {
+      min-width: 0;
+      width: 100%;
+      min-height: 3.25rem;
+      max-height: 8rem;
+      padding: var(--s3);
+      field-sizing: content;
+      resize: none;
+      overflow-y: auto;
+      border: 1px solid var(--control);
+      border-radius: var(--radius);
+      color: var(--ink);
+      background: var(--surface);
+      line-height: 1.5;
+    }
+    .controls textarea::placeholder { color: var(--muted); }
+    .controls textarea:focus-visible { outline-offset: 1px; }
+    .send {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--s2);
+      min-width: 6.4rem;
+      min-height: 3.25rem;
+      flex: none;
+      padding: var(--s2) var(--s4);
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: white;
+      background: var(--primary);
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+    .send:hover:not(:disabled), .send:active:not(:disabled) { background: var(--primary-hover); }
+    .send:disabled { background: #e4ebf2; color: #41586d; cursor: default; }
+    .composer[aria-busy="true"] .send { cursor: wait; }
+    .composer-help {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--s3);
+      margin-top: var(--s2);
+      color: var(--muted);
+      font-size: var(--text-sm);
+    }
+    .keyboard-help { white-space: nowrap; }
+    .page-footer { padding-bottom: var(--s4); color: var(--muted); font-size: var(--text-sm); }
+
+    .urgent-reminder {
+      color: var(--error);
+      font-size: var(--text-sm);
+      font-weight: 650;
+      margin-bottom: var(--s2);
+    }
+    .municipality-row, .review-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--s3);
+      margin-bottom: var(--s3);
+    }
+    .municipality-row label, .review-options label, .draft-panel label {
+      display: block;
+      font-size: var(--text-sm);
+      font-weight: 650;
+    }
+    .municipality-row input, .municipality-row select,
+    .draft-panel select, .draft-panel textarea {
+      display: block;
+      width: 100%;
+      min-height: var(--touch);
+      min-width: 0;
+      margin-top: var(--s1);
+      padding: var(--s2);
+      font: inherit;
+      font-weight: 400;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--control);
+      border-radius: var(--radius);
+    }
+    .draft-panel {
+      width: min(100%, 42rem);
+      margin-top: var(--s3);
+      border: 1px solid var(--line);
+      padding: var(--s4);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+    .draft-panel h2 { font-size: var(--text-md); margin-bottom: var(--s2); }
+    .draft-panel textarea { resize: vertical; min-height: 9rem; }
+    .draft-panel button {
+      min-height: var(--touch);
+      margin-top: var(--s2);
+      padding: var(--s2) var(--s3);
+      border: 1px solid var(--primary);
+      border-radius: var(--radius);
+      background: var(--primary);
+      color: white;
+      font-weight: 650;
+      font-size: var(--text-sm);
+    }
+    .draft-panel .secondary { margin-inline-start: var(--s2); background: white; color: var(--primary); }
+    .draft-note, .reply-note { margin-top: var(--s2); color: var(--muted); font-size: var(--text-sm); }
+    .questions { padding-inline-start: var(--s5); margin-block: var(--s3); }
+    .official-link { display: inline-flex; align-items: center; min-height: var(--touch); font-weight: 650; }
+    @media (max-width: 60rem) {
+      .workspace { grid-template-columns: 12rem minmax(0, 1fr); gap: var(--s5); }
+      .composer-help { display: block; }
+      .keyboard-help { display: none; }
+    }
+    @media (max-width: 48rem) {
+      .page-width { width: calc(100% - 2rem); }
+      .masthead-inner { min-height: 3.75rem; }
+      .brand-context { display: none; }
+      .academic { max-width: 12.5rem; }
+      .workspace { grid-template-columns: minmax(0, 1fr); gap: var(--s3); padding-block: var(--s4); }
+      .support {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+      }
+      .support-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--s2);
+        min-height: var(--touch);
+        padding-inline: var(--s3);
+        border-radius: var(--radius);
+        color: var(--primary);
+        font-weight: 650;
+        font-size: var(--text-sm);
+      }
+      .support-toggle:active { background: var(--question); }
+      .support[open] .support-toggle { border-bottom: 1px solid var(--line); }
+      .support-body { gap: var(--s3); padding: var(--s3); }
+      .support-intro, .suggestion-heading { display: none; }
+      .support .suggestion-section { padding-top: 0; border-top: 0; }
+      .support-section + .support-section { padding-top: var(--s3); }
+      .chat { height: clamp(30rem, calc(100svh - 10.25rem), 45rem); }
+      .chat-header { padding: var(--s3) var(--s4); gap: var(--s2); }
+      .chat-header h1 { font-size: 1.25rem; }
+      .service-status summary { padding-inline: var(--s1); }
+      .history { padding: var(--s3) var(--s4); }
+      .composer { padding: var(--s4); }
+      .messages { gap: var(--s4); }
+      .welcome { padding: var(--s4); }
+      .controls textarea { font-size: 1rem; }
+      .page-footer { padding-bottom: var(--s3); }
+    }
+    @media (max-width: 30rem) {
+      .page-width { width: calc(100% - 1.5rem); }
+      .masthead-inner { gap: var(--s2); }
+      .brand { gap: var(--s2); }
+      .brand-mark { width: 2rem; height: 2rem; }
+      .brand-name { font-size: 1rem; }
+      .academic { max-width: 10rem; font-size: .75rem; line-height: 1.3; }
+      .chat-header { flex-direction: column; gap: var(--s1); }
+      .service-status { align-self: flex-start; }
+      .service-status summary { min-height: var(--touch); margin-block: calc(-1 * var(--s1)) calc(-1 * var(--s2)); }
+      .status-details { inset-inline: 0 auto; }
+      .welcome { gap: var(--s3); }
+      .welcome .icon-box { width: 2rem; height: 2rem; }
+      .send { min-width: 4.4rem; padding-inline: var(--s2); }
+      .municipality-row, .review-options { gap: var(--s2); }
+      .municipality-row input, .municipality-row select,
+      .draft-panel select, .draft-panel textarea { font-size: 1rem; }
+      .send .icon { display: none; }
+      .message-user { max-width: 94%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .spinner { animation: none; }
+    }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#question">Ir para a pergunta</a>
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <symbol id="i-brand" viewBox="0 0 24 24"><path d="M17.5 6.4a7.9 7.9 0 1 0 0 11.2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s7-3.5 7-10V5l-7-3-7 3v7c0 6.5 7 10 7 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 15a3 3 0 0 1-3 3h-7l-5 3v-3.4A3 3 0 0 1 3 15V7a3 3 0 0 1 3-3h11a3 3 0 0 1 3 3Z"/><path d="M7.5 9h8m-8 4h5"/></symbol>
+  <symbol id="i-document" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h4m-9 4h6m-6 4h6"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M13 5h6v6m0-6-9 9m8 0v5H5V6h5"/></symbol>
+</svg>
+<header class="masthead">
+  <div class="page-width masthead-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-brand"/></svg></span>
+      <span class="brand-name">VivaBairro</span>
+      <span class="brand-context">Sua Voz na Cidade</span>
+    </div>
+    <p class="academic">Protótipo acadêmico · FIAP 2026.2</p>
+  </div>
+</header>
+
+<main class="page-width workspace">
+  <aside aria-label="Apoio à conversa">
+    <details class="support" id="support" open>
+      <summary class="support-toggle">Perguntas sugeridas e privacidade <svg class="icon chevron" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg></summary>
+      <div class="support-body">
+        <section class="support-section support-intro">
+          <h2>Sobre o assistente</h2>
+          <p>Descreva um problema urbano, revise o relato e consulte as orientações com fontes oficiais de São Paulo (capital).</p>
+        </section>
+        <section class="support-section suggestion-section" aria-label="Perguntas sugeridas">
+          <h2 class="suggestion-heading">Perguntas sugeridas</h2>
+          <ul class="suggestions">
+            <li><button type="button" class="suggest"><span>Tem um buraco grande na rua onde moro.</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button></li>
+            <li><button type="button" class="suggest"><span>Uma calçada quebrada impede a passagem.</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button></li>
+            <li><button type="button" class="suggest"><span>O poste de iluminação não funciona à noite.</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button></li>
+            <li><button type="button" class="suggest"><span>Há entulho descartado em área pública.</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button></li>
+          </ul>
+        </section>
+        <section class="support-section">
+          <h2 class="privacy-heading"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg> Privacidade</h2>
+          <p>Informe apenas dados do problema e uma referência pública do local. Evite CPF, senhas, e-mail ou telefone pessoal.</p>
+        </section>
+      </div>
+    </details>
+  </aside>
+
+  <section class="chat" aria-labelledby="chat-title">
+    <header class="chat-header">
+      <div>
+        <h1 id="chat-title">Relatar um problema urbano</h1>
+        <p>São Paulo (capital) · Recorte demonstrativo</p>
+      </div>
+      <details class="service-status" id="service-status">
+        <summary aria-labelledby="status-label status-description">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="status-label" role="status">Verificando conexão</span><span class="sr-only" id="status-description"> · Detalhes do assistente</span>
+          <svg class="icon chevron" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg>
+        </summary>
+        <dl class="status-details">
+          <dt>Modo configurado</dt><dd id="status-mode">A verificar</dd>
+          <dt id="model-term" hidden>Modelo</dt><dd id="status-model" hidden></dd>
+          <dt>Verificação</dt><dd id="status-note">Consultando a aplicação.</dd>
+        </dl>
+      </details>
+    </header>
+
+    <div class="history" id="history" tabindex="0" aria-label="Histórico da conversa" role="region">
+      <div class="conversation">
+        <div class="welcome" id="welcome">
+          <span class="icon-box" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-chat"/></svg></span>
+          <div>
+            <h2>O que aconteceu no seu bairro?</h2>
+            <p>Conte o que observou. Você poderá revisar e copiar o relato antes de procurar o canal oficial.</p>
+          </div>
+        </div>
+        <div id="messages" class="messages" role="log" aria-label="Mensagens da conversa" aria-live="polite" aria-relevant="additions"></div>
+        <div class="message pending" id="pending" aria-hidden="true" hidden>
+          <p class="message-label">VivaBairro</p>
+          <p class="message-body"><span class="spinner"></span> Consultando as fontes…</p>
+        </div>
+        <div class="sr-only" id="progress" role="status"></div>
+      </div>
+    </div>
+
+    <form class="composer" id="composer">
+      <p class="urgent-reminder">Em perigo imediato, acione agora os serviços de emergência locais.</p>
+      <div class="municipality-row">
+        <label for="municipality">Município da ocorrência
+          <select id="municipality">
+            <option value="">Ainda não informado</option>
+            <option value="sao_paulo">São Paulo (capital)</option>
+            <option value="outro">Outro município</option>
+          </select>
+        </label>
+        <label for="location">Local aproximado (opcional)
+          <input id="location" maxlength="180" placeholder="Rua ou referência pública">
+        </label>
+      </div>
+      <div class="composer-label">
+        <label for="question">Descreva o problema</label>
+        <span id="counter" class="counter" aria-hidden="true">0 / 2000</span>
+      </div>
+      <div class="controls">
+        <textarea id="question" rows="2" maxlength="2000" placeholder="Ex.: tem um buraco grande na rua" aria-describedby="composer-help"></textarea>
+        <button class="send" id="send" type="submit" disabled>Enviar <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button>
+      </div>
+      <div class="composer-help" id="composer-help">
+        <p>Revise as sugestões. Nenhuma solicitação é enviada à Prefeitura.</p>
+        <p class="keyboard-help">Enter envia · Shift+Enter quebra a linha</p>
+        <span class="sr-only">Limite de 2000 caracteres.</span>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="page-width page-footer">CitizenTech · Global Solution 2026.2 · ODS 11 e 16</footer>
+
+<script>
+  const composer = document.getElementById('composer');
+  const question = document.getElementById('question');
+  const counter = document.getElementById('counter');
+  const municipality = document.getElementById('municipality');
+  const occurrenceLocation = document.getElementById('location');
+  const categories = {
+    vias: 'Buracos e vias', calcadas: 'Calçadas e acessibilidade',
+    iluminacao: 'Iluminação pública', residuos: 'Resíduos e descarte', drenagem: 'Drenagem e alagamentos'
+  };
+  const priorities = { a_confirmar: 'A confirmar', elevada: 'Elevada' };
+  let panelCount = 0;
+  const send = document.getElementById('send');
+  const history = document.getElementById('history');
+  const messages = document.getElementById('messages');
+  const welcome = document.getElementById('welcome');
+  const pending = document.getElementById('pending');
+  const progress = document.getElementById('progress');
+  const support = document.getElementById('support');
+  const supportToggle = support.querySelector('summary');
+  const suggestions = document.querySelectorAll('.suggest');
+  const compact = matchMedia('(max-width: 48rem)');
+  const status = document.getElementById('service-status');
+  const statusLabel = document.getElementById('status-label');
+  const statusMode = document.getElementById('status-mode');
+  const statusModel = document.getElementById('status-model');
+  const modelTerm = document.getElementById('model-term');
+  const statusNote = document.getElementById('status-note');
+
+  let lastSource = null;
+  let busy = false;
+  let connection = 'checking';
+  let provider = null;
+  let model = null;
+  let generation = 'unverified';
+
+  function element(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text) node.textContent = text;
+    return node;
+  }
+
+  function icon(name) {
+    const namespace = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(namespace, 'svg');
+    const use = document.createElementNS(namespace, 'use');
+    svg.setAttribute('class', 'icon');
+    svg.setAttribute('aria-hidden', 'true');
+    svg.setAttribute('focusable', 'false');
+    use.setAttribute('href', '#i-' + name);
+    svg.append(use);
+    return svg;
+  }
+
+  function message(label, text, kind) {
+    const article = element('article', 'message message-' + kind);
+    const body = element('p', 'message-body', text);
+    article.append(element('p', 'message-label', label), body);
+    return { article, body };
+  }
+
+  function sourceList(sources) {
+    const refs = element('div', 'references');
+    const heading = element('h2', 'references-title', 'Fontes citadas');
+    heading.prepend(icon('document'));
+    const list = element('ul', 'references-list');
+    for (const source of sources) {
+      const item = element('li', 'reference');
+      const content = element('div');
+      const title = source.title || source.doc_id || source.url;
+      if (source.url && /^https?:\/\//i.test(source.url)) {
+        const link = element('a', 'reference-link', title);
+        link.href = source.url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.append(icon('external'), element('span', 'sr-only', ' (abre em nova aba)'));
+        content.append(link);
+      } else {
+        content.append(element('span', null, title));
+      }
+      if (source.origin || source.consulted_on) {
+        const meta = element('p', 'reference-meta', source.origin);
+        if (source.consulted_on) {
+          const parts = source.consulted_on.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+          const date = parts ? parts.slice(1).reverse().join('/') : source.consulted_on;
+          const time = element('time', null, date);
+          if (parts) time.dateTime = source.consulted_on;
+          meta.append((source.origin ? ' · ' : '') + 'Consulta em ', time);
+        }
+        content.append(meta);
+      }
+      item.append(element('span', 'reference-id', source.doc_id), content);
+      list.append(item);
+    }
+    refs.append(heading, list);
+    return refs;
+  }
+
+  function renderStatus() {
+    const offline = connection === 'offline';
+    const unavailable = generation === 'unavailable';
+    status.dataset.state = offline || unavailable ? 'error' : connection === 'online' ? 'ready' : 'checking';
+    statusLabel.textContent = offline ? 'Conexão indisponível'
+      : unavailable ? 'Geração indisponível'
+      : connection === 'checking' ? 'Verificando conexão'
+      : provider === 'baseline' ? 'Modo demonstrativo'
+      : 'Aplicação online';
+
+    statusMode.textContent = provider === 'baseline' ? 'Extrator local'
+      : provider ? 'LLM (' + provider + ')' : 'A verificar';
+    statusModel.textContent = model || '';
+    statusModel.hidden = modelTerm.hidden = !model;
+    statusNote.textContent = offline ? 'Falha de comunicação com a aplicação.'
+      : unavailable ? 'A última tentativa de geração ficou indisponível.'
+      : connection === 'checking' ? 'Consultando a aplicação.'
+      : provider === 'baseline' ? 'O primeiro trecho recuperado é exibido no modo demonstrativo.'
+      : generation === 'answered' ? 'O modelo respondeu nesta sessão.'
+      : 'A aplicação respondeu. A disponibilidade do modelo ainda não foi confirmada.';
+  }
+
+  async function checkConnection() {
+    try {
+      const response = await fetch('/health');
+      if (!response.ok) throw new Error('Falha na verificação');
+      const health = await response.json();
+      if (!health.ok) throw new Error('Aplicação indisponível');
+      provider = health.generator;
+      model = health.model;
+      if (connection === 'checking') connection = 'online';
+    } catch {
+      if (connection === 'checking') connection = 'offline';
+    }
+    renderStatus();
+  }
+
+  function updateComposer() {
+    counter.textContent = question.value.length + ' / ' + question.maxLength;
+    send.disabled = busy || !question.value.trim();
+  }
+
+  function setBusy(value) {
+    busy = value;
+    composer.setAttribute('aria-busy', String(value));
+    pending.hidden = !value;
+    municipality.disabled = value;
+    occurrenceLocation.disabled = value;
+    progress.textContent = value ? 'Consultando as fontes.' : '';
+    for (const button of suggestions) button.setAttribute('aria-disabled', String(value));
+    updateComposer();
+  }
+
+  function showLatest(article, nearEnd) {
+    if (!nearEnd) return;
+    if (article.getBoundingClientRect().height > history.clientHeight - 32) {
+      history.scrollTop += article.getBoundingClientRect().top - history.getBoundingClientRect().top - 16;
+    } else {
+      history.scrollTop = history.scrollHeight;
+    }
+  }
+
+  function selectField(labelText, id, values, initial) {
+    const label = element('label', null, labelText);
+    label.htmlFor = id;
+    const field = element('select');
+    field.id = id;
+    for (const [value, text] of Object.entries(values)) {
+      const option = element('option', null, text);
+      option.value = value;
+      field.append(option);
+    }
+    field.value = initial;
+    label.append(field);
+    return { label, field };
+  }
+
+  function draftPanel(data, originalQuestion, channel) {
+    const panel = element('section', 'draft-panel');
+    const id = 'draft-' + (++panelCount);
+    const options = element('div', 'review-options');
+    const category = selectField('Categoria sugerida', id+'-category', categories, data.category.id);
+    const priority = selectField('Prioridade preliminar', id+'-priority', priorities, data.priority.level);
+    options.append(category.label, priority.label);
+    const label = element('label', null, 'Texto do relato');
+    label.htmlFor = id;
+    const field = element('textarea');
+    field.id = id;
+    field.rows = 5;
+    field.value = data.draft + '\nPrioridade preliminar: ' + priorities[data.priority.level];
+    label.append(field);
+    const feedback = element('p', 'draft-note');
+    feedback.setAttribute('role', 'status');
+    const reason = element('p', 'draft-note', data.priority.reason + ' Você pode ajustar a prioridade. A Prefeitura faz a avaliação oficial.');
+    const copy = element('button', null, 'Copiar relato');
+    copy.type = 'button';
+    copy.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(field.value);
+        feedback.textContent = 'Relato copiado.';
+      } catch {
+        field.focus();
+        field.select();
+        feedback.textContent = 'Texto selecionado. Use o comando de copiar do seu dispositivo.';
+      }
+    });
+    const reroute = element('button', 'secondary', 'Consultar categoria revisada');
+    reroute.type = 'button';
+    reroute.hidden = true;
+    reroute.addEventListener('click', () => ask(originalQuestion, true, category.field.value));
+    category.field.addEventListener('change', () => {
+      field.value = field.value.replace(/^Categoria (sugerida|revisada):.*$/m, 'Categoria revisada: ' + categories[category.field.value]);
+      const changed = category.field.value !== data.category.id;
+      if (channel) channel.hidden = changed;
+      reroute.hidden = !changed;
+      feedback.textContent = changed ? 'Consulte a categoria revisada para atualizar a orientação.' : 'Categoria do relato atualizada.';
+    });
+    priority.field.addEventListener('change', () => {
+      field.value = field.value.replace(/^Prioridade (preliminar|revisada):.*$/m, 'Prioridade revisada: ' + priorities[priority.field.value]);
+      feedback.textContent = 'Prioridade do relato atualizada.';
+    });
+    panel.append(element('h2', null, 'Rascunho para revisar'), options, reason, label, copy, reroute, feedback);
+    return panel;
+  }
+
+  async function ask(text, fromSuggestion = false, category = null) {
+    const query = text.trim();
+    if (busy || !query) return;
+
+    if (fromSuggestion && compact.matches) {
+      supportToggle.focus({ preventScroll: true });
+      support.open = false;
+    }
+    const sentFromComposer = composer.contains(document.activeElement);
+    if (!fromSuggestion) question.value = '';
+    welcome.hidden = true;
+
+    const userMessage = message('Você', query, 'user');
+    messages.append(userMessage.article);
+    setBusy(true);
+    history.scrollTop = history.scrollHeight;
+
+    let reply;
+    try {
+      const response = await fetch('/api/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: query, context_doc_id: lastSource, category,
+          municipality: municipality.value || null, location: occurrenceLocation.value.trim() || null }),
+      });
+      connection = 'online';
+
+      if (response.status === 503) {
+        generation = 'unavailable';
+        reply = message('Falha na geração', 'O serviço de resposta está indisponível. Tente novamente mais tarde.', 'error');
+      } else if (response.status === 422) {
+        reply = message('Revise a pergunta', 'Escreva uma pergunta de 4 a 2000 caracteres e tente novamente.', 'error');
+      } else if (!response.ok) {
+        reply = message('Falha na consulta', 'A aplicação não conseguiu concluir a consulta. Tente novamente.', 'error');
+      } else {
+        const data = await response.json();
+        const sources = data.sources || [];
+        if (data.blocked) userMessage.body.textContent = '[Pergunta bloqueada]';
+        lastSource = sources[0]?.doc_id ?? null;
+        if (data.mode !== 'blocked') {
+          provider = data.mode;
+          if (provider !== 'baseline' && !data.abstained) generation = 'answered';
+        }
+        const label = data.urgent ? 'Possível perigo imediato' : data.blocked ? 'Aviso de proteção' : 'VivaBairro';
+        reply = message(label, data.answer, data.urgent ? 'urgent' : 'assistant');
+        if (data.clarifications.length) {
+          const list = element('ul', 'questions');
+          for (const text of data.clarifications) list.append(element('li', null, text));
+          reply.article.append(list);
+        }
+        const channel = data.channel ? element('a', 'official-link', data.channel.label) : null;
+        if (channel) {
+          channel.href = data.channel.url;
+          channel.target = '_blank';
+          channel.rel = 'noopener noreferrer';
+        }
+        if (data.draft) reply.article.append(draftPanel(data, query, channel));
+        if (sources.length) reply.article.append(sourceList(sources));
+        if (channel) reply.article.append(channel);
+        reply.article.append(element('p', 'reply-note', data.notice));
+      }
+    } catch {
+      connection = 'offline';
+      reply = message('Falha de conexão', 'Não foi possível consultar o assistente. Verifique a conexão e tente novamente.', 'error');
+    }
+
+    const nearEnd = history.scrollHeight - history.scrollTop - history.clientHeight < 64;
+    if (reply.article.classList.contains('message-error') && !question.value) question.value = text;
+    setBusy(false);
+    renderStatus();
+    messages.append(reply.article);
+    if (sentFromComposer && document.activeElement === document.body) question.focus({ preventScroll: true });
+    showLatest(reply.article, nearEnd);
+  }
+
+  composer.addEventListener('submit', event => {
+    event.preventDefault();
+    ask(question.value);
+  });
+  question.addEventListener('input', updateComposer);
+  municipality.addEventListener('change', () => { lastSource = null; });
+  question.addEventListener('keydown', event => {
+    if (event.key === 'Enter' && !event.shiftKey && !event.isComposing) {
+      event.preventDefault();
+      if (!send.disabled) composer.requestSubmit();
+    }
+  });
+  for (const button of suggestions) {
+    button.addEventListener('click', () => ask(button.textContent, true));
+  }
+
+  function adaptSupport() {
+    if (compact.matches && support.contains(document.activeElement)) {
+      supportToggle.focus({ preventScroll: true });
+    }
+    support.open = !compact.matches;
+  }
+
+  compact.addEventListener('change', adaptSupport);
+  adaptSupport();
+  updateComposer();
+  if (location.protocol === 'file:') {
+    connection = 'offline';
+    renderStatus();
+    statusNote.textContent = 'Inicie a API pelo README e abra a interface no endereço local do servidor.';
+    status.open = true;
+  } else {
+    checkConnection();
+  }
+</script>
+</body>
+</html>

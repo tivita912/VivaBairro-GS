@@ -1,0 +1,11 @@
+sample_id,text,criterion
+T01,Há uma calçada danificada perto de uma praça. Você pode descrever como isso dificulta a passagem?,clareza
+T02,O buraco parece ocupar cerca de 2 metros da via. Essa medida é aproximada?,número
+T03,O registro foi observado em 15/11/2026.,data
+T04,A iluminação está apagada desde as 19:00.,horário
+T05,Você pode incluir um ponto de referência próximo. Preserve sua privacidade e evite informar o endereço residencial completo.,ritmo e frase longa
+T06,Isso pode prejudicar a acessibilidade. Use o CEP apenas se for necessário no canal oficial.,sigla
+T07,Não tenho informação verificada sobre o órgão responsável no seu município.,incerteza
+T08,Não é seguro atravessar uma via alagada. Afaste-se da área de risco e procure atendimento de emergência quando necessário.,segurança
+T09,O VivaBairro não registra reclamações oficiais nem gera protocolos.,limites
+T10,**Posso ajudar** a organizar um relato breve sobre descarte irregular de lixo.,naturalidade e Markdown

@@ -1,0 +1,6 @@
+data/Positive/
+data/Negative/
+data/*.rar
+__pycache__/
+.ipynb_checkpoints/
+outputs/fila_inspecao.csv

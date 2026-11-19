@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "name": "Viewport 1440",
+      "detail": "Compositor visível e sem rolagem horizontal."
+    },
+    {
+      "name": "Viewport 1366",
+      "detail": "Compositor visível e sem rolagem horizontal."
+    },
+    {
+      "name": "Viewport 768",
+      "detail": "Compositor visível e sem rolagem horizontal."
+    },
+    {
+      "name": "Viewport 390",
+      "detail": "Compositor visível e sem rolagem horizontal."
+    },
+    {
+      "name": "Viewport 375",
+      "detail": "Compositor visível e sem rolagem horizontal."
+    },
+    {
+      "name": "Fluxo Qwen",
+      "detail": "F02, rascunho editado, prioridade alterada, cópia conferida e Carta SP156 aberta."
+    },
+    {
+      "name": "Proteções na interface",
+      "detail": "Outro município sem canal local, perigo imediato sem espera e 503 visível."
+    }
+  ],
+  "errors": [],
+  "real": {
+    "answer": "A solicitação é de reparo localizado no asfalto, quando o buraco pode afetar a circulação ou causar danos. A equipe responsável avalia o ponto indicado no canal oficial. [F02]",
+    "abstained": false,
+    "mode": "llamacpp",
+    "sources": [
+      {
+        "doc_id": "F02",
+        "title": "Tapa-buraco",
+        "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=952",
+        "origin": "Secretaria Municipal das Subprefeituras · SP156",
+        "consulted_on": "2026-11-11"
+      }
+    ],
+    "citations_valid": true,
+    "blocked": false,
+    "removed_injections": 0,
+    "category": {
+      "id": "vias",
+      "label": "Buracos e vias"
+    },
+    "priority": {
+      "level": "a_confirmar",
+      "reason": "O relato pode ser complementado com o impacto e a frequência."
+    },
+    "clarifications": [],
+    "draft": "Categoria sugerida: Buracos e vias\nMunicípio: São Paulo (SP)\nLocal: Praça de exemplo\nO que observei: Tem um buraco grande na rua onde moro.\nImpacto ou frequência: [complete se souber]",
+    "channel": {
+      "label": "Consultar o Portal SP156",
+      "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=952"
+    },
+    "urgent": false,
+    "notice": "Nenhuma solicitação foi registrada. Revise o relato e encaminhe pelo canal oficial.",
+    "submitted": false
+  },
+  "outside": {
+    "answer": "A base desta demonstração cobre São Paulo (capital). Consulte os canais da prefeitura do local da ocorrência.",
+    "abstained": true,
+    "mode": "llamacpp",
+    "sources": [],
+    "citations_valid": false,
+    "blocked": false,
+    "removed_injections": 0,
+    "category": {
+      "id": "vias",
+      "label": "Buracos e vias"
+    },
+    "priority": {
+      "level": "a_confirmar",
+      "reason": "O relato pode ser complementado com o impacto e a frequência."
+    },
+    "clarifications": [],
+    "draft": "Categoria sugerida: Buracos e vias\nMunicípio: [informe o município]\nLocal: Praça de exemplo\nO que observei: Há um buraco no asfalto.\nImpacto ou frequência: [complete se souber]",
+    "channel": null,
+    "urgent": false,
+    "notice": "Nenhuma solicitação foi registrada. Revise o relato e encaminhe pelo canal oficial.",
+    "submitted": false
+  },
+  "urgent": {
+    "answer": "Pode haver perigo imediato. Procure um lugar seguro e acione agora os serviços de emergência da sua localidade. Não espere a análise do VivaBairro.",
+    "abstained": true,
+    "mode": "llamacpp",
+    "sources": [],
+    "citations_valid": false,
+    "blocked": false,
+    "removed_injections": 0,
+    "category": null,
+    "priority": {
+      "level": "imediata",
+      "reason": "O relato menciona um sinal de perigo imediato."
+    },
+    "clarifications": [],
+    "draft": null,
+    "channel": null,
+    "urgent": true,
+    "notice": "Priorize o atendimento de emergência.",
+    "submitted": false
+  }
+}

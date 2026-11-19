@@ -1,0 +1,4 @@
+# Dependências opcionais para geração e inspeção do relatório acadêmico, além de requirements.txt.
+reportlab==5.1.0
+pymupdf==2.1
+numpy==2.5.4

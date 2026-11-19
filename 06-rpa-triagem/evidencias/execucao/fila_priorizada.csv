@@ -1,0 +1,18 @@
+id,data,bairro,categoria,prioridade,motivo_prioridade,confianca,chuva_mm,precisa_revisao,descricao
+9c6d37465b99f050,2026-11-18,Butantã,Calçadas e acessibilidade,alta,termo de risco: caiu,0.94,1.1,0,Raiz de árvore levantou o piso da calçada e uma idosa caiu ontem de manhã.
+bb3b74835ad99888,2026-11-18,Capão Redondo,Drenagem e alagamentos,alta,termo de risco: invadi,0.8,1.6,0,A rua alagou ontem à noite e a água invadiu duas casas da parte baixa.
+928dcc50ccc1143e,2026-11-18,Santana,Iluminação pública,alta,termo de risco: risco,0.72,1.0,0,"Fio solto pendurado no poste de luz, perto do ponto de ônibus, com risco de choque."
+9d9313e9d54defa8,2026-11-18,Lapa,Calçadas e acessibilidade,alta,termo de risco: cadeirante,0.67,1.6,0,"Calçada quebrada em frente à estação, um cadeirante precisou ir pela rua para conseguir passar."
+ac871409b7dd39c7,2026-11-18,Penha,Vias e buracos,alta,termo de risco: afund,0.65,0.9,0,"Asfalto afundando perto da boca de lobo, o buraco aumenta a cada chuva."
+bc5bec1212b4949a,2026-11-18,Itaquera,Drenagem e alagamentos,media,sem termo de risco nem de baixa urgencia,0.99,2.2,0,"Bueiro entupido na rua de baixo, quando chove a água cobre a calçada e não escoa."
+9eff134ce1e688a8,2026-11-18,Jabaquara,Drenagem e alagamentos,media,sem termo de risco nem de baixa urgencia,0.96,0.5,0,"Boca de lobo cheia de folhas e garrafas na esquina da escola, a água fica parada."
+e0a86d65d80fca67,2026-11-18,Pinheiros,Iluminação pública,media,sem termo de risco nem de baixa urgencia,0.91,1.8,0,"Poste apagado na esquina faz mais de dez dias, o quarteirão fica todo escuro à noite."
+2c0252f79bd36917,2026-11-18,Vila Mariana,Lixo e limpeza,media,sem termo de risco nem de baixa urgencia,0.86,1.8,0,O caminhão do lixo não passou esta semana e os sacos estão empilhados na esquina.
+91e23e855c74579b,2026-11-18,Tucuruvi,Iluminação pública,media,sem termo de risco nem de baixa urgencia,0.85,1.0,0,"Lâmpada do poste piscando sem parar na frente do meu portão, incomoda para dormir."
+dfeae24bf4bdbc53,2026-11-18,Itaquera,Lixo e limpeza,media,sem termo de risco nem de baixa urgencia,0.82,2.2,0,"Entulho e móveis velhos jogados no terreno ao lado da creche, já apareceu rato."
+7f28b847aacd3620,2026-11-18,Grajaú,Lixo e limpeza,media,sem termo de risco nem de baixa urgencia,0.82,0.8,0,"Mato alto tomando conta da praça, ninguém faz a limpeza há meses."
+170540947eb58315,2026-11-18,Lapa,Vias e buracos,media,sem termo de risco nem de baixa urgencia,0.7,1.6,0,"Buraco fundo na Rua Guaicurus, na altura do mercado, os carros desviam para a contramão."
+f5aaa970c15c8af3,2026-11-18,Vila Nova Esperança,Drenagem e alagamentos,media,sem termo de risco nem de baixa urgencia,0.54,1.0,0,"Rua de terra cheia de valas depois da chuva, a ambulância não conseguiu subir."
+fbd2715ed1fa233d,2026-11-18,São Miguel Paulista,Vias e buracos,media,sem termo de risco nem de baixa urgencia,0.53,2.2,0,"Tem um buraco na minha rua. Meu CPF é [CPF REMOVIDO] e meu telefone é [TELEFONE REMOVIDO], podem me ligar."
+3422d8828bbb64c3,2026-11-18,Santo Amaro,Outros,media,sem termo de risco nem de baixa urgencia,0.29,0.7,1,"Semáforo de pedestres não acende no cruzamento da avenida, as pessoas atravessam no susto."
+b35e329b7d5e2244,2026-11-18,Mooca,Outros,baixa,termo de baixa urgencia: estetic,0.84,0.8,0,"Pichação nova no muro da biblioteca, é um problema estético, sem urgência."

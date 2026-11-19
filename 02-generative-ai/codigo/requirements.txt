@@ -1,0 +1,11 @@
+# Ambiente verificado: CPython 3.12 (Windows x64).
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.9.1
+fastapi==0.162.4
+uvicorn==0.54.0
+requests==2.34.2
+python-dotenv==1.2.4
+pytest==9.2.0
+httpx==0.28.1
+

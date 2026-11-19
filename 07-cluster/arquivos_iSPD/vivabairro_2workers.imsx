@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE system SYSTEM "iSPD.dtd">
+<system version="2.0">
+    <owner id="user1"/>
+    <cluster bandwidth="1000.0" id="cluster0" latency="0.001" master="true" nodes="2" owner="user1" power="30000.0" scheduler="RoundRobin">
+        <position x="300" y="160"/>
+        <icon_id global="0" local="0"/>
+        <characteristic>
+            <process number="1" power="30000.0"/>
+            <memory size="0.0"/>
+            <hard_disk size="0.0"/>
+        </characteristic>
+    </cluster>
+    <load>
+        <random tasks="50000" time_arrival="0">
+            <size average="600" maximum="600" minimum="600" probability="0.5" type="computing"/>
+            <size average="1" maximum="1" minimum="1" probability="0.5" type="communication"/>
+        </random>
+    </load>
+</system>

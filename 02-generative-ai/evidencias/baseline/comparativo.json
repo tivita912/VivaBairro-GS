@@ -1,0 +1,107 @@
+[
+  {
+    "name": "estrutural_bm25",
+    "strategy": "structure",
+    "retriever": "bm25",
+    "size": 65,
+    "overlap": 10,
+    "queries": 11,
+    "chunks": 14,
+    "overlap_transitions": 0,
+    "document": {
+      "hit": 0.7273,
+      "mrr": 0.6667,
+      "recall": 0.7273,
+      "ndcg": 0.6818
+    },
+    "section": {
+      "hit": 0.7273,
+      "mrr": 0.6212,
+      "recall": 0.7273,
+      "ndcg": 0.6483
+    }
+  },
+  {
+    "name": "estrutural_lsa",
+    "strategy": "structure",
+    "retriever": "dense",
+    "size": 65,
+    "overlap": 10,
+    "queries": 11,
+    "chunks": 14,
+    "overlap_transitions": 0,
+    "document": {
+      "hit": 0.7273,
+      "mrr": 0.6667,
+      "recall": 0.7273,
+      "ndcg": 0.6818
+    },
+    "section": {
+      "hit": 0.7273,
+      "mrr": 0.5758,
+      "recall": 0.7273,
+      "ndcg": 0.6147
+    }
+  },
+  {
+    "name": "estrutural_hibrido",
+    "strategy": "structure",
+    "retriever": "hybrid",
+    "size": 65,
+    "overlap": 10,
+    "queries": 11,
+    "chunks": 14,
+    "overlap_transitions": 0,
+    "document": {
+      "hit": 0.7273,
+      "mrr": 0.6667,
+      "recall": 0.7273,
+      "ndcg": 0.6818
+    },
+    "section": {
+      "hit": 0.7273,
+      "mrr": 0.6212,
+      "recall": 0.7273,
+      "ndcg": 0.6483
+    }
+  },
+  {
+    "name": "janelas_hibrido",
+    "strategy": "fixed",
+    "retriever": "hybrid",
+    "size": 65,
+    "overlap": 10,
+    "queries": 11,
+    "chunks": 14,
+    "overlap_transitions": 4,
+    "document": {
+      "hit": 0.7273,
+      "mrr": 0.6667,
+      "recall": 0.7273,
+      "ndcg": 0.6818
+    },
+    "section": null
+  },
+  {
+    "name": "estrutural_curto",
+    "strategy": "structure",
+    "retriever": "hybrid",
+    "size": 32,
+    "overlap": 8,
+    "queries": 11,
+    "chunks": 26,
+    "overlap_transitions": 12,
+    "document": {
+      "hit": 0.6364,
+      "mrr": 0.6364,
+      "recall": 0.6364,
+      "ndcg": 0.6364
+    },
+    "section": {
+      "hit": 0.6364,
+      "mrr": 0.5909,
+      "recall": 0.6364,
+      "ndcg": 0.6028
+    }
+  }
+]

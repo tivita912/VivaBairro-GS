@@ -1,0 +1,12 @@
+﻿VIVABAIRRO - GLOBAL SOLUTION 2026.2
+Disciplina: Front-End em Sistemas de IA
+
+GitHub (codigo-fonte): https://github.com/Danylukk/VivaBairro
+
+Video final sem audio (4min52s): https://github.com/Danylukk/VivaBairro/blob/main/docs/video/VivaBairro_GS2026_2_Demo_SemAudio.mp4
+
+Commit da entrega: 54323555a8a6d50fbc58c077ffc3a566d9b4ed92
+
+O codigo, os testes, as evidencias e o video tambem estao inclusos neste ZIP.
+
+Para executar: consultar README.md. O modo padrao e demonstracao, sem chamadas pagas de IA.

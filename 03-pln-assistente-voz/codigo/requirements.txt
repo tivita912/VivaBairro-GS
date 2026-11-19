@@ -1,0 +1,8 @@
+# Fundação: versões instaladas e verificadas neste ambiente; veja docs/validation.md.
+fastapi==0.162.5
+uvicorn==0.54.0
+httpx==0.28.1  # cliente dos testes HTTP
+jiwer==4.0.0
+openai[realtime]==3.49.0
+python-dotenv==1.2.4
+av==19.0.2

@@ -1,0 +1,20 @@
+2026-11-19 10:45:33 | INFO    | Inicio. Entrada: dados/entrada
+2026-11-19 10:45:33 | INFO    | Arquivo lido: relatos_2026-11-18.csv (22 linhas)
+2026-11-19 10:45:33 | WARNING | 1 relato(s) repetido(s) dentro do lote foram ignorados.
+2026-11-19 10:45:33 | WARNING | Linha invalida: relatos_2026-11-18.csv linha 20 (descricao com menos de 30 caracteres). Vai para revisao humana.
+2026-11-19 10:45:33 | WARNING | Linha invalida: relatos_2026-11-18.csv linha 21 (bairro ausente ou com tamanho invalido). Vai para revisao humana.
+2026-11-19 10:45:33 | WARNING | Linha invalida: relatos_2026-11-18.csv linha 22 (data ausente ou fora do formato AAAA-MM-DD). Vai para revisao humana.
+2026-11-19 10:45:33 | WARNING | Linha invalida: relatos_2026-11-18.csv linha 23 (descricao com menos de 30 caracteres). Vai para revisao humana.
+2026-11-19 10:45:34 | INFO    | IA aplicada a 17 relato(s): categoria por NLP, prioridade por regras.
+2026-11-19 10:45:42 | WARNING | Bairro fora da tabela de coordenadas: Vila Nova Esperança. Usando o centro da cidade.
+2026-11-19 10:45:43 | INFO    | Banco: 17 relato(s) novo(s), 0 ja existente(s).
+2026-11-19 10:45:43 | INFO    | Fila priorizada: 17 relato(s). Revisao humana: 5 item(ns).
+2026-11-19 10:45:43 | INFO    | SMTP nao configurado. E-mail salvo em resumo.eml
+2026-11-19 10:45:44 | INFO    | Fim. Status: concluido. Relatorio em saida/relatorio_execucao.md
+
+Status: concluido
+Linhas lidas: 22 | validas: 17 | invalidas: 4 | novos no banco: 17
+API de clima: ok (15 bairro(s) consultado(s))
+E-mail: salvo em arquivo (sem SMTP)
+Resultados em: saida/
+Copia das evidencias em: evidencias/execucao/

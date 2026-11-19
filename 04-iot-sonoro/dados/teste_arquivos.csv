@@ -1,0 +1,16 @@
+n,arquivo,real,previsto,observacao
+1,sirene.77g5fr2j,sirene,sirene,"9 janelas: 6 sirene, 2 uncertain, 1 ambiente_rua"
+2,sirene.77g5fki3,sirene,sirene,"9 janelas: 6 sirene, 2 buzina, 1 uncertain"
+3,sirene.77g5927k,sirene,sirene,9 janelas: 9 sirene
+4,sirene.77g56ser,sirene,sirene,9 janelas: 9 sirene
+5,sirene.77g56ff0,sirene,sirene,9 janelas: 9 sirene
+6,buzina.77g5of9c,buzina,buzina,9 janelas: 9 buzina
+7,buzina.77g5o86q,buzina,buzina,9 janelas: 9 buzina
+8,buzina.77g5no8v,buzina,buzina,9 janelas: 9 buzina
+9,buzina.77g5nhp9,buzina,buzina,9 janelas: 9 buzina
+10,buzina.77g5nae2,buzina,buzina,9 janelas: 9 buzina
+11,ambiente_rua.77g6djpp,ambiente_rua,sirene,"9 janelas: 5 sirene, 4 ambiente_rua"
+12,ambiente_rua.77g6dcvk,ambiente_rua,ambiente_rua,9 janelas: 9 ambiente_rua
+13,ambiente_rua.77g6d6f3,ambiente_rua,ambiente_rua,9 janelas: 9 ambiente_rua
+14,ambiente_rua.77g6cvs3,ambiente_rua,ambiente_rua,"9 janelas: 6 ambiente_rua, 3 uncertain"
+15,ambiente_rua.77g6cpu2,ambiente_rua,ambiente_rua,"9 janelas: 3 ambiente_rua, 2 buzina, 2 sirene, 2 uncertain"

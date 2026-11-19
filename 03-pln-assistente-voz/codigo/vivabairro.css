@@ -1,0 +1,72 @@
+/* VivaBairro Voz — estilos de interface. Não altera regras ou processamento da API. */
+.gradio-container {
+  max-width: 1440px !important;
+  width: 100% !important;
+  margin-inline: auto !important;
+  padding: 20px clamp(12px, 3vw, 40px) 56px !important;
+  font-size: 16px !important;
+}
+#vb-hero {
+  background: linear-gradient(115deg, #114d43 0%, #12695c 62%, #087f76 100%);
+  color: #fff;
+  padding: clamp(22px, 4vw, 36px) !important;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 12px 28px rgba(3,40,36,.14);
+}
+#vb-hero h1 { color: #fff !important; font-size: clamp(28px, 3vw, 40px); line-height: 1.15; margin: 0 0 10px; }
+#vb-hero p { color: #e3fff5 !important; font-size: clamp(15px, 1.3vw, 18px); max-width: 75ch; }
+#vb-hero strong { color: #fff; }
+#vb-intro { margin: 6px 0 16px !important; }
+#vb-intro p { font-size: 15px !important; line-height: 1.65; }
+#vb-consent { border-radius: 16px !important; overflow: hidden; }
+#vb-status textarea, #vb-status input { font-weight: 600; }
+#vb-workspace { align-items: flex-start !important; gap: 18px !important; margin-top: 16px !important; }
+#vb-main, #vb-side { min-width: 0; }
+#vb-capture, #vb-results, #vb-history { border-radius: 18px !important; }
+#vb-capture { border: 1px solid var(--border-color-primary, #64748b); padding: 12px !important; }
+#vb-capture h2 { font-size: 22px; margin: 0 0 4px; }
+#vb-capture p { line-height: 1.55; }
+#vb-mic-send, #vb-file-send, #vb-authorize {
+  min-height: 50px !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+}
+#vb-mic-send button, #vb-file-send button, #vb-authorize button {
+  min-height: 50px !important;
+}
+#vb-results { padding: 8px !important; }
+#vb-results h3 { margin: 4px 0 12px; font-size: 21px; }
+#vb-history { padding: 6px !important; }
+#vb-history h3 { font-size: 21px; }
+#vb-history .message { overflow-wrap: anywhere; }
+#vb-transcript textarea, #vb-answer textarea {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  min-height: 120px;
+}
+#vb-audio audio { min-height: 50px; }
+#vb-clear button { min-height: 46px !important; }
+#vb-footer { margin-top: 14px; opacity: .85; font-size: 13px !important; }
+.gradio-container button, .gradio-container input, .gradio-container textarea {
+  font-family: inherit;
+}
+.gradio-container button { min-height: 44px; font-size: 16px; }
+.gradio-container :is(button, input, textarea, select, [role="tab"]):focus-visible {
+  outline: 3px solid #f59e43 !important;
+  outline-offset: 3px !important;
+}
+@media (max-width: 900px) {
+  .gradio-container { padding: 12px 12px 36px !important; }
+  #vb-hero { border-radius: 15px; }
+  #vb-workspace { gap: 12px !important; }
+  #vb-main, #vb-side { min-width: 100% !important; }
+  #vb-capture, #vb-results, #vb-history { border-radius: 12px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gradio-container *, .gradio-container *::before, .gradio-container *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}

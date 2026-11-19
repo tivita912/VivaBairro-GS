@@ -1,0 +1,198 @@
+[
+  {
+    "id": "F01",
+    "title": "Perguntas frequentes do SP156",
+    "url": "https://prefeitura.sp.gov.br/web/inovacao/w/acesso_a_informacao/350229",
+    "origin": "Secretaria Municipal de Inovação e Tecnologia",
+    "domain": "geral",
+    "last_modified": "2026-11-10",
+    "limitations": "Consulta geral. Cada carta indica os canais e condições do serviço.",
+    "municipality": "São Paulo (SP)",
+    "consulted_on": "2026-11-11",
+    "content_type": "paráfrase curada",
+    "sections": [
+      {
+        "heading": "Consultar e encaminhar um relato",
+        "text": "O Portal SP156 da Prefeitura de São Paulo reúne os serviços municipais e suas cartas. Para relatar um problema urbano, procure no portal o serviço correspondente ao local e à situação, confira os canais na carta e siga o formulário oficial."
+      },
+      {
+        "heading": "Acompanhamento oficial",
+        "text": "O protocolo é fornecido pelo canal oficial ao registrar uma solicitação. O Portal SP156 oferece consulta de andamento. Os canais e a possibilidade de solicitação anônima dependem da carta de cada serviço."
+      }
+    ]
+  },
+  {
+    "id": "F02",
+    "title": "Tapa-buraco",
+    "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=952",
+    "origin": "Secretaria Municipal das Subprefeituras · SP156",
+    "domain": "vias",
+    "last_modified": null,
+    "limitations": "Buracos em asfalto de via pública. A curadoria não cobre calçadas nem prazo de execução.",
+    "municipality": "São Paulo (SP)",
+    "consulted_on": "2026-11-11",
+    "content_type": "paráfrase curada",
+    "sections": [
+      {
+        "heading": "Buraco no asfalto",
+        "text": "Para buraco no asfalto de uma via pública da cidade de São Paulo, consulte a carta de Tapa-buraco do Portal SP156. Descreva onde está o buraco e a referência mais próxima que permita localizar o ponto."
+      },
+      {
+        "heading": "Escopo da manutenção viária",
+        "text": "A solicitação é de reparo localizado no asfalto, quando o buraco pode afetar a circulação ou causar danos. A equipe responsável avalia o ponto indicado no canal oficial."
+      }
+    ]
+  },
+  {
+    "id": "F03",
+    "title": "Acessibilidade · avaliação de obstáculo na calçada",
+    "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=2634",
+    "origin": "Secretaria Municipal das Subprefeituras · SP156",
+    "domain": "calcada_obstaculo",
+    "last_modified": "2026-11-09",
+    "limitations": "Fiscalização de obstáculos físicos. Calçada quebrada requer identificar se é pública ou particular.",
+    "municipality": "São Paulo (SP)",
+    "consulted_on": "2026-11-11",
+    "content_type": "paráfrase curada",
+    "sections": [
+      {
+        "heading": "Obstáculo no passeio",
+        "text": "Se um obstáculo físico, como vaso ou barra de ferro, estiver dificultando a circulação de pedestres ou cadeirantes na calçada, consulte a carta de avaliação de obstáculo no Portal SP156. A carta pede o endereço e uma descrição do que prejudica a acessibilidade."
+      }
+    ]
+  },
+  {
+    "id": "F04",
+    "title": "Calçada pública · manutenção",
+    "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=931",
+    "origin": "Secretaria Municipal das Subprefeituras · SP156",
+    "domain": "calcada_publica",
+    "last_modified": null,
+    "limitations": "Aplica-se a passeio público conforme a carta. A condição do passeio precisa ser confirmada.",
+    "municipality": "São Paulo (SP)",
+    "consulted_on": "2026-11-11",
+    "content_type": "paráfrase curada",
+    "sections": [
+      {
+        "heading": "Reparo de calçada pública",
+        "text": "Para piso quebrado, buraco ou dano em calçada pública, consulte a carta de manutenção de calçada pública no Portal SP156. A carta distingue esses passeios das calçadas vinculadas a imóveis e indica os dados do ponto a informar."
+      }
+    ]
+  },
+  {
+    "id": "F05",
+    "title": "Calçada particular · denúncia de irregularidade",
+    "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=906",
+    "origin": "Secretaria Municipal das Subprefeituras · SP156",
+    "domain": "calcada_particular",
+    "last_modified": "2026-11-11",
+    "limitations": "Fiscalização de calçada particular. A vistoria e eventual regularização cabem ao processo oficial.",
+    "municipality": "São Paulo (SP)",
+    "consulted_on": "2026-11-11",
+    "content_type": "paráfrase curada",
+    "sections": [
+      {
+        "heading": "Calçada vinculada a imóvel",
+        "text": "Quando uma calçada particular danificada, inexistente ou irregular dificulta a passagem de pedestres ou de pessoas com mobilidade reduzida, consulte a carta de denúncia de calçada particular no Portal SP156. Informe o ponto e descreva o dano ou a barreira."
+      }
+    ]
+  },
+  {
+    "id": "F06",
+    "title": "Como solicitar serviços de iluminação pública",
+    "url": "https://prefeitura.sp.gov.br/web/spregula/w/iluminacao_publica/noticias/328582",
+    "origin": "SP Regula · Iluminação Pública",
+    "domain": "iluminacao",
+    "last_modified": "2022-05-06",
+    "limitations": "Somente luminárias de ruas, praças e túneis. Orientação de manutenção, sem garantias de prazo.",
+    "municipality": "São Paulo (SP)",
+    "consulted_on": "2026-11-11",
+    "content_type": "paráfrase curada",
+    "sections": [
+      {
+        "heading": "Luminária pública com defeito",
+        "text": "Uma lâmpada pública apagada, queimada, piscando ou com funcionamento irregular em rua, praça ou túnel pode ser comunicada à Central SP156 para manutenção da iluminação pública. Informe o ponto da luminária e descreva o que observou."
+      },
+      {
+        "heading": "Limites da manutenção",
+        "text": "A gerência municipal de iluminação pública trata das luminárias das ruas, praças e túneis. Falta de energia dentro de imóveis pertence a outro atendimento. A implantação de iluminação é distinta do reparo de luminária existente."
+      }
+    ]
+  },
+  {
+    "id": "F07",
+    "title": "Descarte irregular de entulho e resíduos em área pública",
+    "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?a=572&servico=915&t=561",
+    "origin": "Secretaria Municipal das Subprefeituras · SP156",
+    "domain": "residuos_publico",
+    "last_modified": null,
+    "limitations": "Área pública. A denúncia de limpeza de terreno particular tem carta própria.",
+    "municipality": "São Paulo (SP)",
+    "consulted_on": "2026-11-11",
+    "content_type": "paráfrase curada",
+    "sections": [
+      {
+        "heading": "Descarte em área pública",
+        "text": "Para descarte irregular de lixo, entulho ou outros resíduos em rua, praça ou outra área pública, consulte a carta de denúncia de descarte irregular no Portal SP156. Localize o ponto e descreva o material e a situação observada."
+      }
+    ]
+  },
+  {
+    "id": "F08",
+    "title": "Falta de limpeza de terrenos e imóveis particulares",
+    "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=908",
+    "origin": "Secretaria Municipal das Subprefeituras · SP156",
+    "domain": "residuos_particular",
+    "last_modified": null,
+    "limitations": "Terrenos e imóveis particulares. A classificação do terreno precisa ser confirmada.",
+    "municipality": "São Paulo (SP)",
+    "consulted_on": "2026-11-11",
+    "content_type": "paráfrase curada",
+    "sections": [
+      {
+        "heading": "Limpeza em terreno particular",
+        "text": "Para lixo ou falta de limpeza em terreno ou imóvel particular, consulte a carta de denúncia de falta de limpeza de terrenos e imóveis particulares no Portal SP156. Indique o local e descreva a condição observada."
+      }
+    ]
+  },
+  {
+    "id": "F09",
+    "title": "Limpeza de bocas de lobo, galerias e ramais",
+    "url": "https://prefeitura.sp.gov.br/web/se/w/zeladoria_urbana/68224",
+    "origin": "Subprefeitura Sé · Prefeitura de São Paulo",
+    "domain": "drenagem",
+    "last_modified": "2024-11-11",
+    "limitations": "Limpeza de drenagem quando há indício de obstrução. Alagamento isolado não confirma bueiro entupido.",
+    "municipality": "São Paulo (SP)",
+    "consulted_on": "2026-11-11",
+    "content_type": "paráfrase curada",
+    "sections": [
+      {
+        "heading": "Obstrução na drenagem",
+        "text": "Quando houver indício de que uma boca de lobo, bueiro ou galeria está obstruída, a Prefeitura de São Paulo orienta procurar a Central 156 ou a praça de atendimento da subprefeitura para solicitar limpeza ou desobstrução. Indique o ponto da obstrução observada."
+      },
+      {
+        "heading": "Alagamento e limite da orientação",
+        "text": "Resíduos e entulho na drenagem podem contribuir para alagamentos durante a chuva. Um alagamento recorrente pode ser descrito com o local, a frequência e o impacto. A causa do alagamento exige avaliação do órgão competente."
+      }
+    ]
+  },
+  {
+    "id": "F10",
+    "title": "Telefones úteis da Defesa Civil de São Paulo",
+    "url": "https://prefeitura.sp.gov.br/web/defesa_civil/w/noticias/184619",
+    "origin": "Defesa Civil do Município de São Paulo",
+    "domain": "emergencia",
+    "last_modified": null,
+    "limitations": "Referência da capital. Atendimento imediato é orientado fora da triagem do VivaBairro.",
+    "municipality": "São Paulo (SP)",
+    "consulted_on": "2026-11-11",
+    "content_type": "paráfrase curada",
+    "sections": [
+      {
+        "heading": "Emergência e atendimento oficial",
+        "text": "A Defesa Civil do Município de São Paulo mantém uma página com telefones oficiais para emergências. Ao acionar o atendimento, relate o que está acontecendo e informe a localização se puder fazê-lo com segurança."
+      }
+    ]
+  }
+]

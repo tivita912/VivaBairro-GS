@@ -1,0 +1,12 @@
+# PyTorch com CUDA (GPU NVIDIA): pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+# Sem GPU: pip install torch torchvision
+torch>=2.6
+torchvision>=0.21
+opencv-python>=4.9
+numpy
+pandas
+matplotlib
+scikit-learn
+pillow
+streamlit>=1.40
+jupyter

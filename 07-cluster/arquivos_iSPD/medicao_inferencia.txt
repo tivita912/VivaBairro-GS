@@ -1,0 +1,19 @@
+Benchmark MobileNetV2 - VivaBairro
+Data: 12/11/2026 19:18:48,69
+Processador:
+Intel(R) Core(TM) i7-10700KF CPU @ 3.80GHz
+Python 3.13.14
+tensorflow 2.21.0
+--- execucao 1
+parametros: 2259265
+JPEG sintetico (kB): 45.8
+ms por relato: mediana 20.56 | media 21.12 | p10 19.52 | p90 23.1
+--- execucao 2
+parametros: 2259265
+JPEG sintetico (kB): 45.8
+ms por relato: mediana 20.24 | media 20.8 | p10 19.17 | p90 22.72
+--- execucao 3
+parametros: 2259265
+JPEG sintetico (kB): 45.8
+ms por relato: mediana 20.4 | media 20.91 | p10 19.09 | p90 23.46
+FIM

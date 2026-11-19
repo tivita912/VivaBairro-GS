@@ -1,0 +1,49 @@
+arquivo,classe_real,blocos_alerta,blocos_total,prob_max,esperado,modelo,acertou
+buraco/buraco_01.jpg,buraco,12,24,1.0,inspecionar,inspecionar,True
+buraco/buraco_02.jpg,buraco,5,30,1.0,inspecionar,inspecionar,True
+buraco/buraco_03.jpg,buraco,4,66,0.996,inspecionar,inspecionar,True
+buraco/buraco_04.jpg,buraco,16,48,1.0,inspecionar,inspecionar,True
+buraco/buraco_05.jpg,buraco,17,48,1.0,inspecionar,inspecionar,True
+buraco/buraco_06.jpg,buraco,11,48,1.0,inspecionar,inspecionar,True
+buraco/buraco_07.jpg,buraco,6,30,1.0,inspecionar,inspecionar,True
+buraco/buraco_08.jpg,buraco,36,66,1.0,inspecionar,inspecionar,True
+buraco/buraco_09.jpg,buraco,1,48,0.989,inspecionar,inspecionar,True
+buraco/buraco_10.jpg,buraco,31,78,1.0,inspecionar,inspecionar,True
+buraco/buraco_11.jpg,buraco,10,48,1.0,inspecionar,inspecionar,True
+buraco/buraco_12.jpg,buraco,5,48,1.0,inspecionar,inspecionar,True
+buraco/buraco_13.jpg,buraco,3,48,0.998,inspecionar,inspecionar,True
+buraco/buraco_14.jpg,buraco,13,36,1.0,inspecionar,inspecionar,True
+buraco/buraco_15.jpg,buraco,30,78,1.0,inspecionar,inspecionar,True
+buraco/buraco_16.jpg,buraco,31,78,1.0,inspecionar,inspecionar,True
+buraco/buraco_17.jpg,buraco,0,66,0.92,inspecionar,sem fissura,False
+buraco/buraco_18.jpg,buraco,0,30,0.772,inspecionar,sem fissura,False
+fissura_asfalto/fissura_asfalto_01.jpg,fissura_asfalto,5,24,1.0,inspecionar,inspecionar,True
+fissura_asfalto/fissura_asfalto_02.jpg,fissura_asfalto,7,30,1.0,inspecionar,inspecionar,True
+fissura_asfalto/fissura_asfalto_03.jpg,fissura_asfalto,10,30,1.0,inspecionar,inspecionar,True
+fissura_asfalto/fissura_asfalto_04.jpg,fissura_asfalto,8,30,1.0,inspecionar,inspecionar,True
+fissura_asfalto/fissura_asfalto_05.jpg,fissura_asfalto,6,30,0.999,inspecionar,inspecionar,True
+fissura_asfalto/fissura_asfalto_06.jpg,fissura_asfalto,10,54,1.0,inspecionar,inspecionar,True
+fissura_asfalto/fissura_asfalto_07.jpg,fissura_asfalto,4,24,1.0,inspecionar,inspecionar,True
+fissura_asfalto/fissura_asfalto_08.jpg,fissura_asfalto,33,48,1.0,inspecionar,inspecionar,True
+fissura_asfalto/fissura_asfalto_09.jpg,fissura_asfalto,18,24,1.0,inspecionar,inspecionar,True
+fissura_asfalto/fissura_asfalto_10.jpg,fissura_asfalto,0,24,0.21,inspecionar,sem fissura,False
+fissura_asfalto/fissura_asfalto_11.jpg,fissura_asfalto,0,24,0.204,inspecionar,sem fissura,False
+fissura_asfalto/fissura_asfalto_12.jpg,fissura_asfalto,17,24,1.0,inspecionar,inspecionar,True
+fissura_asfalto/fissura_asfalto_13.jpg,fissura_asfalto,8,24,1.0,inspecionar,inspecionar,True
+fissura_asfalto/fissura_asfalto_14.jpg,fissura_asfalto,3,24,0.996,inspecionar,inspecionar,True
+fissura_asfalto/fissura_asfalto_15.jpg,fissura_asfalto,21,36,1.0,inspecionar,inspecionar,True
+fissura_asfalto/fissura_asfalto_16.jpg,fissura_asfalto,25,48,1.0,inspecionar,inspecionar,True
+fissura_asfalto/fissura_asfalto_17.jpg,fissura_asfalto,13,36,1.0,inspecionar,inspecionar,True
+fissura_asfalto/fissura_asfalto_18.jpg,fissura_asfalto,1,24,0.99,inspecionar,inspecionar,True
+sem_dano/sem_dano_01.jpg,sem_dano,0,30,0.908,sem fissura,sem fissura,True
+sem_dano/sem_dano_02.jpg,sem_dano,0,36,0.001,sem fissura,sem fissura,True
+sem_dano/sem_dano_04.jpg,sem_dano,0,36,0.001,sem fissura,sem fissura,True
+sem_dano/sem_dano_09.jpg,sem_dano,12,30,0.999,sem fissura,inspecionar,False
+sem_dano/sem_dano_10.jpg,sem_dano,0,24,0.888,sem fissura,sem fissura,True
+sem_dano/sem_dano_11.jpg,sem_dano,0,30,0.009,sem fissura,sem fissura,True
+sem_dano/sem_dano_12.jpg,sem_dano,13,24,1.0,sem fissura,inspecionar,False
+sem_dano/sem_dano_13.jpg,sem_dano,30,54,1.0,sem fissura,inspecionar,False
+sem_dano/sem_dano_14.jpg,sem_dano,3,24,0.996,sem fissura,inspecionar,False
+sem_dano/sem_dano_15.jpg,sem_dano,0,24,0.092,sem fissura,sem fissura,True
+sem_dano/sem_dano_16.jpg,sem_dano,13,36,1.0,sem fissura,inspecionar,False
+sem_dano/sem_dano_18.jpg,sem_dano,0,30,0.011,sem fissura,sem fissura,True

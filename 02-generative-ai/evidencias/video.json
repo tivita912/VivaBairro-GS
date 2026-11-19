@@ -1,0 +1,65 @@
+{
+  "seconds": 213.021333,
+  "resolution": "1440x900",
+  "video": "H.264",
+  "audio": "AAC, 48 kHz, estéreo",
+  "subtitles": "mov_text, português",
+  "narration": "Vídeo enviado com narração de Thiago em substituição à voz sintética",
+  "decode": "ok, verificado via ffmpeg",
+  "bytes": 6334142,
+  "sha256": "057bbb3e10dba6677303c99e7c2808bd8c1b61159b9946934c0e678ff36d5387",
+  "video_stream_same_as_original": true,
+  "validation_note": "Foi confirmada a integridade técnica; a concordância entre legendas e todas as palavras faladas ainda requer escuta humana.",
+  "historical_video_metadata": {
+    "seconds": 213,
+    "resolution": "1440x900",
+    "video": "H.264",
+    "audio": "AAC",
+    "subtitles": "mov_text, português",
+    "narration": "Piper local pt_BR Faber",
+    "decode": "ok",
+    "bytes": 3922446,
+    "levels": [
+      {
+        "cena": 1,
+        "rms_dbfs": -14.7,
+        "locucao_segundos": 18.13
+      },
+      {
+        "cena": 2,
+        "rms_dbfs": -15.4,
+        "locucao_segundos": 20.44
+      },
+      {
+        "cena": 3,
+        "rms_dbfs": -15.0,
+        "locucao_segundos": 24.12
+      },
+      {
+        "cena": 4,
+        "rms_dbfs": -14.7,
+        "locucao_segundos": 19.87
+      },
+      {
+        "cena": 5,
+        "rms_dbfs": -15.1,
+        "locucao_segundos": 17.56
+      },
+      {
+        "cena": 6,
+        "rms_dbfs": -15.5,
+        "locucao_segundos": 18.02
+      },
+      {
+        "cena": 7,
+        "rms_dbfs": -14.9,
+        "locucao_segundos": 19.83
+      },
+      {
+        "cena": 8,
+        "rms_dbfs": -16.5,
+        "locucao_segundos": 19.7
+      }
+    ]
+  }
+}

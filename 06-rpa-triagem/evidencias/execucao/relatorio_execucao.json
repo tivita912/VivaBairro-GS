@@ -1,0 +1,19 @@
+{
+  "status": "concluido",
+  "inicio": "2026-11-19 10:45:33",
+  "fim": "2026-11-19 10:45:44",
+  "duracao_s": 10.56,
+  "arquivos_lidos": 1,
+  "arquivos_rejeitados": [],
+  "linhas_lidas": 22,
+  "validas": 17,
+  "invalidas": 4,
+  "repetidos_no_lote": 1,
+  "novos": 17,
+  "ja_existentes": 0,
+  "para_revisao": 1,
+  "dados_pessoais_mascarados": 1,
+  "api_clima": "ok (15 bairro(s) consultado(s))",
+  "prioridades_alteradas_pela_chuva": 0,
+  "email": "salvo em arquivo (sem SMTP)"
+}
