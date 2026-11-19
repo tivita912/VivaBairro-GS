@@ -16,7 +16,7 @@ Este repositório reúne o que foi desenvolvido e entregue em cada disciplina. �
 
 | Pasta | Disciplina | O que tem |
 | --- | --- | --- |
-| `01-front-end-mobile` | Front End & Mobile | Interface de relato com revisão humana e painel (Streamlit e FastAPI) |
+| `01-front-end` | Front-End em Sistemas de IA | Interface de relato com revisão humana e painel (Streamlit e FastAPI) |
 | `02-generative-ai` | Generative AI & Advanced Nets | Assistente que indica o canal oficial, com RAG e modelo local |
 | `03-pln-assistente-voz` | Processamento de Linguagem Natural | Assistente de voz (fala, texto, fala) |
 | `04-iot-sonoro` | Physical Computing, Embedded AI, Robotics & Cognitive IoT | Reconhecimento de sirene e buzina no celular |
@@ -32,7 +32,7 @@ Cada pasta tem o próprio README ou relatório, com as instruções e os resulta
 
 Todos usam Python. Os comandos abaixo são executados dentro da pasta de cada módulo.
 
-Front End & Mobile:
+Front-End em Sistemas de IA:
 
 ```
 pip install -r backend/requirements.txt -r frontend/requirements.txt
